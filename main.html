@@ -1,0 +1,4646 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=3.0">
+    <title>KIA-KJE</title>
+    <link rel="stylesheet" href="style.css">
+    <style type="text/css"></style>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+    <script type="text/javascript"></script>
+    <!----AOS-->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!---slick JS--->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css">
+</head>
+
+
+<body>
+
+    <style>
+        @charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cabin:wght@400;600&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+    word-break: keep-all;
+    outline: px solid silver;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+body {
+    color: black;
+}
+
+h1,
+h2,
+h3 {
+    text-transform: uppercase;
+}
+
+h1 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    line-height: 1.8rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+}
+
+h3 {
+    font-size: 1.2rem;
+    line-height: 1.4rem;
+}
+
+h4 {
+    font-size: 1rem;
+}
+
+p,
+li {
+    font-size: 0.8rem;
+}
+
+li {
+    transition: 0.5s;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    transition: 0.3s;
+    text-transform: uppercase;
+}
+
+img {
+    width: 100px;
+    display: block;
+}
+
+button {
+    border: 1px solid transparent;
+    background: white;
+    padding: 8px 15px;
+    transition: 0.3s;
+    font-weight: bold;
+}
+
+button a:hover {
+    color: rgb(29, 92, 134);
+}
+
+table {
+    border-collapse: collapse;
+    border: none;
+}
+
+article>div:not(.news>div) {
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 80px 8%;
+}
+
+article>div>h2 {
+    margin-bottom: 40px;
+    text-transform: uppercase;
+}
+
+footer>div {
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 80px 8% 120px;
+}
+
+.pc,
+.pc-flex {
+    display: none;
+}
+
+.display-flex-flow {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+/*design*/
+
+main>div {
+    position: relative;
+}
+
+main>div header {
+    padding: 15px 8%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 50;
+    top: 0;
+    left: 0;
+    right: 0;
+    transition: 0.3s;
+}
+
+main>div header>div {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+main>div header>div>:first-child {
+    width: 25%;
+    max-width: 70px;
+}
+
+main>div header>div>:last-child {
+    margin: auto 0;
+}
+
+main>div header>div>:last-child img {
+    width: 25px;
+    cursor: pointer;
+    margin-left: 5px;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 100%;
+    width: 100%;
+    height: 100vh;
+    z-index: 100;
+    background-color: white;
+    overflow-y: scroll;
+    transition: 0.3s;
+}
+
+.nav-open-btn {
+    filter: invert(1);
+}
+
+.nav-close-btn {
+    font-size: 2rem;
+    line-height: 2rem;
+    font-weight: bold;
+    text-align: right;
+    cursor: pointer;
+}
+
+.header-icons {
+    display: flex;
+    margin: auto 0;
+}
+
+.header-icons div img {
+    width: 20px;
+    cursor: pointer;
+}
+
+.header-icons div:first-of-type img {
+    filter: invert(1);
+}
+
+.header-icons .select-lan {
+    position: relative;
+}
+
+.header-icons .select-lan .lan-options {
+    position: absolute;
+    top: 30px;
+    left: 50%;
+    transform: translateX(-45%);
+    padding: 8px;
+    background-color: white;
+    border-radius: 20px;
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.header-icons .select-lan .lan-options li {
+    text-align: center;
+    text-transform: uppercase;
+    margin: 8px;
+    font-weight: bold;
+}
+
+.active2 {
+    opacity: 1;
+}
+
+nav {
+    position: fixed;
+    background-color: white;
+    top: 0;
+    left: 100%;
+    width: 100%;
+    height: 100vh;
+    overflow-y: scroll;
+    z-index: 50;
+}
+
+nav::-webkit-scrollbar {
+    width: 8px;
+}
+
+nav::-webkit-scrollbar-button {
+    display: none;
+}
+
+nav::-webkit-scrollbar-thumb {
+    background-color: #aaa;
+    border-radius: 20px;
+    background-clip: padding-box;
+}
+
+nav::-webkit-scrollbar-track {
+    background-color: #eee;
+}
+
+nav>div {
+    padding: 20px 8%;
+    position: relative;
+}
+
+nav>div>:first-child>:nth-child(2) {
+    flex-wrap: nowrap;
+    width: 65%;
+    margin: 20px 0;
+    text-align: right;
+    float: right;
+}
+
+nav>div>:first-child>:nth-child(2) button {
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+nav>div>:first-child>:nth-child(2) button a {
+    color: white;
+}
+
+nav>div>:first-child>:nth-child(2) button:first-of-type {
+    display: flex;
+    background-color: #262846;
+}
+
+nav>div>:first-child>:nth-child(2) button img {
+    margin: auto;
+    filter: brightness(200%);
+}
+
+nav>div>:first-child>:nth-child(2) button:first-of-type:hover {
+    background-color: rgb(29, 92, 134);
+}
+
+nav>div>:first-child>:nth-child(2) button:first-of-type img {
+    width: 15px;
+    margin-right: 10px;
+}
+
+nav>div>:first-child>:nth-child(2) button:last-of-type {
+    background-color: rgb(95, 155, 189);
+}
+
+nav>div>:first-child>:nth-child(2) button:last-of-type:hover {
+    background-color: rgb(29, 92, 134);
+}
+
+nav>div>:first-child>:nth-child(3) {
+    clear: both;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+nav>div>:first-child>:nth-child(3) div {
+    width: 100%;
+}
+
+nav>div>:first-child>:nth-child(3) div:first-of-type {
+    margin-bottom: 10px;
+}
+
+nav>div>:first-child>:nth-child(3) div h4 span {
+    font-weight: 300;
+    font-size: 0.9rem;
+}
+
+nav>div>:first-child>:nth-child(3) div p {
+    color: #555;
+}
+
+nav>div>:first-child>:nth-child(3)>:first-child>:first-child {
+    width: 50%;
+}
+
+nav>div>:first-child>:nth-child(3)>:first-child>:last-child {
+    color: rgb(29, 92, 134);
+    font-weight: bold;
+    font-size: 0.9rem;
+    width: 40%;
+    text-align: right;
+    cursor: pointer;
+}
+
+nav>div>:first-child>:nth-child(3) div button {
+    padding: 10px;
+    background: none;
+    border: 1px solid #222;
+    width: 48%;
+    cursor: pointer;
+}
+
+nav>div>:first-child>:nth-child(3) div button:hover {
+    background-color: rgba(69, 145, 189, 0.2);
+}
+
+nav>div>:first-child>:nth-child(4) {
+    background: url("https://www.acebed.com/common/images/gnb-search-btn.png") no-repeat center right 10px;
+    width: 100%;
+    border: none;
+    border-bottom: 3px solid;
+    padding: 10px;
+    margin: 20px 0 25px;
+}
+
+.mainMenu {
+    margin-bottom: 25px;
+}
+
+.mainMenu>li {
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 10px 0;
+    cursor: pointer;
+}
+
+.mainMenu>li:hover {
+    background-color: rgba(69, 145, 189, 0.2);
+}
+
+.mainMenu>li a:hover {
+    color: rgb(29, 92, 134);
+}
+
+.mainMenu>li div p {
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+nav>div>:nth-child(3) section {
+    width: 48%;
+    padding: 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin: 5px 0;
+    text-align: center;
+    cursor: pointer;
+}
+
+nav>div>:nth-child(3) section img {
+    width: 25px;
+    margin: auto;
+    margin-bottom: 10px;
+}
+
+nav>div>:nth-child(3) section p {
+    font-weight: bold;
+}
+
+/* .main-slide */
+
+main>div>div section {
+    position: relative;
+    text-align: center;
+    height: 600px;
+}
+
+main>div>div section>:first-child {
+    position: absolute;
+    top: 20%;
+    left: 8%;
+    transform: translateY(30%);
+    z-index: 1;
+    color: white;
+    width: 84%;
+    max-width: 900px;
+}
+
+main>div>div section>:first-child h4 {
+    font-weight: 300;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: 1s;
+}
+
+main>div>div section>:first-child h1 {
+    margin: 10px 0 30px;
+    font-size: 1.5rem;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: 1.5s;
+    font-family: 'Cabin', sans-serif;
+}
+
+main>div>div section>:first-child div {
+    width: 65%;
+    max-width: 190px;
+    margin: 0 auto;
+    opacity: 0;
+    transform: translateY(60px);
+    transition: 2s;
+}
+
+main>div>div section>:first-child div button {
+    cursor: pointer;
+}
+
+.price-btn {
+    background-color: #262846;
+    border: 1px solid transparent;
+    transition: 0.3s;
+}
+
+.price-btn:hover {
+    border: 1px solid white;
+}
+
+.price-btn a {
+    color: white;
+    font-weight: 300;
+}
+
+.price-btn a:hover {
+    color: white;
+}
+
+.more-btn a:hover {
+    color: rgb(29, 92, 134);
+}
+
+main>div>div section>:last-child {
+    width: 100%;
+    position: relative;
+}
+
+main>div>div section>:last-child img {
+    width: 100%;
+    height: 700px;
+    object-fit: cover;
+}
+
+main>div>div section>:last-child>:last-child {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.2) 40%, rgba(0, 0, 0, 0.9) 80%);
+}
+
+/* 메인 Slick*/
+/* 점dots 커스텀 */
+.main-slide .slick-dots {
+    width: 40%;
+    max-width: 200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    left: 50%;
+    bottom: 120px;
+    transform: translateX(-50%);
+}
+
+.main-slide .slick-dots>li {
+    width: 20px;
+    height: 5px;
+    display: block;
+}
+
+.main-slide .slick-dots>li>button::before {
+    content: "";
+    width: 20px;
+    height: 3px;
+    background: white;
+    transition: 0.8s;
+}
+
+/* 버튼 제거*/
+.main-slide .slick-next,
+.main-slide .slick-prev {
+    position: relative;
+    height: 0;
+    width: 0;
+}
+
+.main-slide .slick-next::before,
+.main-slide .slick-prev::before {
+    display: none;
+}
+
+.slick-dotted.slick-slider {
+    margin-bottom: 0px;
+}
+
+/* 글자 수직으로 움직임 aos 느낌*/
+.slick-slide.slick-active section>:first-child h4 {
+    opacity: 1;
+    transform: translateY(0px);
+}
+
+.slick-slide.slick-active section>:first-child h1 {
+    opacity: 1;
+    transform: translateY(0px);
+}
+
+.slick-slide.slick-active section>:first-child div {
+    opacity: 1;
+    transform: translateY(0px);
+}
+
+.check-estimate {
+    display: flex;
+    justify-content: space-between;
+    width: 84%;
+    max-width: 700px;
+    margin: 0 auto;
+    position: absolute;
+    top: 580px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.check-estimate section {
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    background-color: #262846;
+    color: white;
+    transition: 0.3s;
+    cursor: pointer;
+    width: 48%;
+}
+
+.check-estimate section:hover {
+    background-color: rgb(29, 92, 134);
+}
+
+.check-estimate section h4 {
+    font-weight: 300;
+    font-size: 0.8rem;
+}
+
+.check-estimate section img {
+    width: 15px;
+    height: 15px;
+    margin: auto 0;
+    filter: invert(1);
+}
+
+.calculator,
+.model {
+    display: none;
+}
+
+.calculator>:first-child,
+.model>:first-child {
+    padding: 25px 30px;
+    padding-bottom: 50px;
+    border-radius: 10px;
+    background-color: white;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    z-index: 61;
+    text-align: center;
+}
+
+.calculator>:last-child,
+.model>:last-child {
+    background-color: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 60;
+}
+
+.calculator>:first-child ul,
+.model>:first-child>ul {
+    display: flex;
+    justify-content: space-between;
+    margin: 15px auto 30px;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+    font-weight: bold;
+    max-width: 400px;
+}
+
+.calculator>:first-child ul li,
+.model>:first-child>ul li {
+    color: #777;
+    cursor: pointer;
+}
+
+.calculator>:first-child ul li:hover,
+.model>:first-child>ul li:hover {
+    color: rgb(69, 145, 189);
+}
+
+.calculator>:first-child div {
+    max-width: 400px;
+    margin: auto;
+}
+
+.model>:first-child div {
+    max-width: 500px;
+    margin: auto;
+}
+
+/* tapsee JS*/
+.calculator>:first-child ul .tapsee,
+.model>:first-child>ul .tapsee {
+    color: rgb(69, 145, 189);
+}
+
+.calculator>:first-child>:nth-child(4)>:first-child,
+.calculator>:first-child>:nth-child(5)>:first-child {
+    text-align: left;
+    font-weight: bold;
+}
+
+.calculator>:first-child div .pst {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.calculator>:first-child div input {
+    width: 100%;
+    margin: 20px 0;
+    background: #eee;
+    outline: none;
+    -webkit-appearance: none;
+    accent-color: #262846;
+}
+
+.calculator>:first-child div input[type=range] {
+    -webkit-appearance: none;
+    height: 3px;
+}
+
+.calculator>:first-child div input[type=range]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+.calculator>:first-child div input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    background: #262846;
+    height: 20px;
+    width: 20px;
+    margin-top: -10px;
+    border-radius: 50%;
+}
+
+.calculator>:first-child>div>:last-child>:last-child {
+    font-weight: bold;
+    padding: 8px;
+    background-color: #eee;
+    margin-bottom: 30px;
+}
+
+.close-calculator,
+.close-model {
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: right;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.close-calculator:hover,
+.close-model:hover {
+    color: #aaa;
+}
+
+.calculator>:first-child button {
+    background-color: #262846;
+}
+
+.calculator>:first-child button:hover {
+    background-color: rgb(69, 145, 189);
+}
+
+.calculator>:first-child button a {
+    color: white;
+    font-weight: 300;
+}
+
+.model div section>div {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.model div section>div>:first-child {
+    width: 100%;
+    padding: 30px;
+    background-color: #eee;
+    border-radius: 10px;
+    border: 1px dotted #ccc;
+}
+
+.model div section>div>:first-child img {
+    margin: auto;
+    width: 30px;
+    border-radius: 50%;
+    padding: 8px;
+    background-color: white;
+    filter: invert(1);
+    margin-bottom: 15px;
+    transition: 0.3s;
+}
+
+.model div section>div>:first-child img:hover {
+    transform: scale(1.2);
+}
+
+.model div section ul {
+    text-align: left;
+}
+
+.model div section ul li {
+    line-height: 1.7rem;
+    margin: 10px 0;
+}
+
+.model div section ul li span {
+    font-weight: bold;
+}
+
+.model2,
+.model3 {
+    display: none;
+}
+
+.bottomMenu {
+    background-color: white;
+    padding: 20px 5%;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    width: 100%;
+    left: 0;
+    bottom: 0px;
+    z-index: 10;
+    box-shadow: 0px -1px 8px rgba(0, 0, 0, 0.3);
+    transition: 0.8s;
+}
+
+.bottomMenu div img {
+    width: 20px;
+    height: 20px;
+    margin: auto;
+    cursor: pointer;
+}
+
+.bottomMenu div h2 {
+    font-family: 'Cabin', sans-serif;
+}
+
+.bottomMenu div p {
+    font-weight: bold;
+    font-size: 0.7rem;
+    margin-top: 10px;
+    color: #555;
+    text-align: center;
+}
+
+.search-pop {
+    position: absolute;
+    width: 84%;
+    max-width: 400px;
+    top: 50px;
+    opacity: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: white;
+    transition: 0.5s;
+    visibility: hidden;
+}
+
+.search-pop>div {
+    padding: 30px 5% 70px;
+}
+
+.search-pop>div>:first-child {
+    border-bottom: 2px solid #222;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.search-pop>div>:first-child input {
+    width: 80%;
+    padding: 5px;
+    border: 0;
+}
+
+.search-pop>div>:first-child input::placeholder {
+    font-size: 1rem;
+}
+
+.search-pop>div>:first-child img {
+    filter: invert(1);
+    width: 25px;
+}
+
+.search-pop>div>:nth-child(2) {
+    flex-wrap: nowrap;
+}
+
+.search-pop>div>:nth-child(2) p {
+    font-weight: bold;
+    color: rgb(29, 92, 134);
+    width: 25%;
+    margin: auto;
+}
+
+.search-pop>div>:nth-child(2) div {
+    display: flex;
+    justify-content: space-between;
+    width: 75%;
+}
+
+.search-pop>div>:nth-child(2) div button {
+    border: 1px solid #aaa;
+    padding: 5px 10px;
+    font-weight: 300;
+}
+
+.search-pop>div>:nth-child(2) div button:hover {
+    background-color: #19191f;
+    color: white;
+}
+
+.search-pop>div>:last-child{
+    text-align: right;
+    margin-top: 150px;
+}
+
+.search-pop>div>:last-child button{
+    padding: 8px 25px;
+    cursor: pointer;
+    border: 1px solid #222;
+}
+
+.search-pop>div>:last-child button:hover{
+    background-color: #222;
+    color: white;
+}
+
+.kia-data>div>h2 {
+    margin-bottom: 0;
+}
+
+.kia-data>div>h2 span {
+    font-family: 'Cabin', sans-serif;
+}
+
+.kia-data>div>p {
+    margin: 8px 0 40px;
+}
+
+.kia-data>div>:nth-child(3)>:first-child {
+    max-width: 490px;
+    width: 100%;
+    margin: auto 0;
+}
+
+.kia-data>div>:nth-child(3)>:last-child {
+    width: 100%;
+    max-width: 400px;
+    margin: auto 0;
+}
+
+.kia-data>div>:nth-child(3)>:first-child section {
+    padding: 20px 0;
+}
+
+.kia-data>div>:nth-child(3)>:first-child section:first-of-type {
+    border-bottom: 1px solid #ccc;
+}
+
+.kia-data>div>:nth-child(3)>:first-child section p {
+    font-weight: bold;
+}
+
+.kia-data>div>:nth-child(3)>:first-child section h3 {
+    font-size: 1.5rem;
+}
+
+.kia-data>div>:nth-child(3)>:first-child>:last-child {
+    margin-top: 20px;
+    padding: 30px 5% 70px;
+    text-align: left;
+    border-radius: 8px;
+    position: relative;
+    overflow: hidden;
+    border: 2px solid #ccc;
+}
+
+.kia-data>div>:nth-child(3)>:first-child>:last-child img {
+    position: absolute;
+    right: -40px;
+    bottom: 30px;
+    width: 55%;
+}
+
+.kia-data>div>:nth-child(3)>:nth-child(2)>div {
+    margin-top: 40px;
+}
+
+.kia-data>div>:nth-child(3)>:nth-child(2)>div>div {
+    width: 15%;
+}
+
+.kia-data>div>:nth-child(3)>:nth-child(2)>div>div .graph {
+    background-color: #eee;
+    width: 100%;
+    height: 150px;
+    position: relative;
+    overflow: hidden;
+}
+
+.kia-data>div>:nth-child(3)>:nth-child(2)>div>div .graph span {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgb(69, 145, 189);
+}
+
+.kia-data>div>:nth-child(3)>:nth-child(2)>div>div .stack1 span {
+    background-color: #262846;
+    height: 70%;
+}
+
+.kia-data>div>:nth-child(3)>:nth-child(2)>div>div .stack2 span {
+    height: 32%;
+}
+
+
+.kia-data>div>:nth-child(3)>:nth-child(2)>div>div .stack3 span {
+    height: 20%;
+}
+
+
+.kia-data>div>:nth-child(3)>:nth-child(2)>div>div p {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.event {
+    background-color: #19191f;
+    color: white;
+}
+
+.event>div>h2 {
+    margin-bottom: 0;
+}
+
+.event>div>p {
+    margin: 8px 0 60px;
+}
+
+.event>div>p a {
+    color: white;
+}
+
+.event>div>div {
+    position: relative;
+    padding-bottom: 50px;
+}
+
+.event>div>div>:first-child,
+.event>div>div>:last-child {
+    width: 100%;
+    max-width: 480px;
+    margin: 0 auto;
+}
+
+.event>div>div>:first-child section {
+    margin-bottom: 30px;
+}
+
+.event>div>div>:first-child section>div {
+    margin-bottom: 30px;
+    display: flex;
+    text-align: left;
+}
+
+.event>div>div>:first-child section>div h1 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-right: 20px;
+    padding: 10px;
+}
+
+.event>div>div>:first-child section>div h1::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: white;
+    margin: 10px auto 0;
+}
+
+.event>div>div>:first-child section>div div {
+    margin: auto 0;
+}
+
+.event>div>div>:first-child section img {
+    width: 100%;
+}
+
+/* event-car-main slick arrow style */
+.event-arrows {
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+}
+
+.event-arrows button {
+    background: none;
+    border: 1px solid #aaa;
+    color: white;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.event-arrows button img {
+    width: 15px;
+    height: 15px;
+    margin: auto;
+    filter: invert(0.5);
+}
+
+.event-arrows button:first-of-type img {
+    transform: rotate(-90deg);
+}
+
+.event-arrows button:last-of-type img {
+    transform: rotate(90deg);
+}
+
+
+/* event-car Slick 버튼 없애ㅐ*/
+
+.event-car .slick-next,
+.event-car .slick-prev {
+    position: relative;
+    height: 0;
+    width: 0;
+}
+
+.event-car .slick-next::before,
+.event-car .slick-prev::before {
+    display: none;
+}
+
+.event>div>div>:last-child section div {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    background-color: black;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 5px 0;
+    color: white;
+    text-align: left;
+}
+
+.event>div>div>:last-child section div h2 {
+    margin: auto 0;
+}
+
+.event>div>div>:last-child section div img {
+    width: 120px;
+}
+
+.event>div>div>:last-child section div p {
+    margin: auto 0;
+    width: 80px;
+    font-size: 0.7rem;
+}
+
+.best>div>h2 {
+    font-family: 'Cabin', sans-serif;
+}
+
+.best>div ul {
+    padding-bottom: 10px;
+    border-bottom: 2px solid #ccc;
+    font-weight: bold;
+    max-width: 400px;
+    margin: 40px auto;
+}
+
+.best>div ul li {
+    color: #777;
+    cursor: pointer;
+}
+
+.best>div ul li:hover {
+    color: rgb(29, 92, 134);
+}
+
+/*
+.best>div div>div {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+*/
+
+.best>div div>div section {
+    padding: 30px 8%;
+    width: 100%;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+}
+
+.best>div div>div section>:first-child h3 span {
+    word-break: keep-all;
+    font-size: 0.7rem;
+    line-height: 1.8rem;
+    vertical-align: middle;
+    border-radius: 10px;
+    padding: 2px 10px;
+    color: white;
+    background-color: #222;
+    text-transform: uppercase;
+}
+
+.best>div div>div section>:first-child p {
+    color: #aaa;
+}
+
+.best>div div>div section>:nth-child(2) {
+    margin: 30px 0;
+}
+
+.best>div div>div section>:nth-child(2) img {
+    width: 100%;
+}
+
+.best>div div>div section>:nth-child(2) div {
+    background: url("https://cdn-icons-png.flaticon.com/128/1330/1330134.png") no-repeat center #eee;
+    background-size: 40%;
+    width: 30px;
+    border-radius: 50%;
+    padding: 20px;
+    margin-bottom: 20px;
+    float: right;
+    transition: 0.3s;
+}
+
+.best>div div>div section>:nth-child(2) div:hover {
+    transform: scale(1.2);
+}
+
+.best>div div>div section>:nth-child(3) {
+    clear: both;
+    height: 150px;
+    overflow-y: scroll;
+}
+
+.best>div div>div section>:nth-child(3)::-webkit-scrollbar {
+    width: 5px;
+}
+
+.best>div div>div section>:nth-child(3)::-webkit-scrollbar-button {
+    display: none;
+}
+
+.best>div div>div section>:nth-child(3)::-webkit-scrollbar-thumb {
+    background-color: #aaa;
+    border-radius: 20px;
+}
+
+.best>div div>div section>:nth-child(3)::-webkit-scrollbar-track {
+    background-color: #eee;
+}
+
+.best>div div>div section>:nth-child(3) table {
+    width: 100%;
+}
+
+.best>div div>div section>:nth-child(3) tr td {
+    text-align: left;
+    padding: 10px 8px;
+    font-size: 0.8rem;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}
+
+.best>div div>div section>:nth-child(3) tr td:first-of-type {
+    background-color: #f3f3f3;
+    font-weight: bold;
+}
+
+.best>div div>div section>:nth-child(4) {
+    text-align: right;
+    margin: 15px 0 20px;
+}
+
+.best>div div>div section>:nth-child(4) span {
+    font-size: 1rem;
+    margin-left: 8px;
+    font-weight: 300;
+}
+
+.best>div div>div section button {
+    width: 100%;
+}
+
+.best>div div>div section button:first-of-type {
+    border: 1px solid rgb(29, 92, 134);
+}
+
+.best>div div>div section button:last-of-type {
+    margin-top: 10px;
+    background-color: #262846;
+}
+
+.best>div div>div section button:last-of-type a {
+    color: white;
+    font-weight: 300;
+}
+
+.best>div>div>p:first-of-type {
+    margin: 8px 0;
+    font-weight: bold;
+    color: rgb(29, 92, 134);
+}
+
+/* best JS*/
+.best>div ul .tapsee {
+    color: rgb(29, 92, 134);
+}
+
+#best-list2,
+#best-list3,
+#best-list4 {
+    display: none;
+}
+
+.new-best-product1,
+.new-best-product2,
+.efficiency-best-product1,
+.efficiency-best-product2,
+.space-best-product1,
+.space-best-product2,
+.safe-best-product1,
+.safe-best-product2 {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.number {
+    margin: 20px 0 40px;
+}
+
+.number span {
+    font-weight: bold;
+    margin: 10px;
+    cursor: pointer;
+}
+
+.numberPic {
+    color: rgb(95, 155, 189);
+    font-size: 1.5rem;
+}
+
+.new-best-product2,
+.efficiency-best-product2,
+.space-best-product2,
+.safe-best-product2 {
+    display: none;
+}
+
+/* best Slick*/
+
+.best .slick-next,
+.best .slick-prev {
+    position: relative;
+    height: 0;
+    width: 0;
+}
+
+.best .slick-next::before,
+.best .slick-prev::before {
+    display: none;
+}
+
+.news {
+    background: url("https://www.kia.com/content/dam/kwp/kr/ko/buy/kv_rental_pc.jpg") no-repeat center;
+    background-size: cover;
+    position: relative;
+    text-align: center;
+}
+
+.news>div>h2 {
+    font-family: 'Cabin', sans-serif;
+}
+
+.news>div {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+}
+
+.news>div>div {
+    padding: 80px 8%;
+}
+
+.news>div>div h2 {
+    margin-bottom: 40px;
+    text-transform: uppercase;
+}
+
+.news>div>div section {
+    margin: 20px 0;
+    border: 1px solid white;
+    position: relative;
+    padding: 30px;
+    width: 100%;
+}
+
+.news>div>div section h4 {
+    margin: 8px 0 20px;
+}
+
+.news>div>div section button {
+    background: none;
+    padding: 0;
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+}
+
+.news>div>div section P:last-of-type {
+    margin-bottom: 50px;
+    color: #aaa;
+    height: 75px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+}
+
+.news>div>div section button {
+    filter: invert(1);
+}
+
+.news>div>div section button img {
+    width: 20px;
+}
+
+.news>div>div>button {
+    margin-top: 30px;
+    background-color: transparent;
+    border: 1px solid white;
+    padding: 8px 30px;
+    color: white;
+}
+
+.news>div>div>button:hover {
+    background-color: white;
+    color: black;
+}
+
+.map>div {
+    position: relative;
+}
+
+.map>div>:nth-child(2) {
+    background-color: rgb(69, 145, 189);
+    padding: 40px 20px;
+    max-width: 350px;
+    margin: 0 auto;
+    border-radius: 15px;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.map>div>:nth-child(2) h2 {
+    font-weight: 300;
+    color: white;
+    margin-bottom: 30px;
+}
+
+.map>div>:nth-child(2) h2 span {
+    font-weight: bold;
+}
+
+.map>div>:nth-child(2)>:nth-child(2) {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 5px;
+    border-bottom: 1px solid white;
+}
+
+.map>div>:nth-child(2) div input {
+    width: 100%;
+    padding: 5px 0;
+    border: 0 solid;
+    background: transparent;
+}
+
+.map>div>:nth-child(2) div input::placeholder {
+    color: white;
+}
+
+.map>div>:nth-child(2) div .local-search-btn {
+    width: 25px;
+    height: 25px;
+    margin: auto;
+    cursor: pointer;
+}
+
+.local-search-pop {
+    padding: 30px 5% 50px;
+    border: 1px solid #ccc;
+    position: absolute;
+    width: 90%;
+    bottom: -230px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: white;
+    transition: 0.5s;
+    z-index: 1;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.local-search-pop>:first-child p {
+    font-weight: bold;
+    color: rgb(29, 92, 134);
+    width: 28%;
+    text-align: left;
+}
+
+.local-search-pop>:first-child>div {
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.local-search-pop>:first-child>div button{
+    border: 1px solid #aaa;
+    padding: 5px;
+    font-weight: 300;
+}
+
+.local-search-pop>:first-child>div button:hover{
+    background-color: #19191f;
+    color: white;
+}
+
+.local-search-pop>:last-child{
+    text-align: right;
+    margin-top: 120px;
+}
+
+.local-search-pop>:last-child button {
+    padding: 8px 25px;
+    cursor: pointer;
+    border: 1px solid #222;
+}
+
+.local-search-pop>:last-child button:hover {
+    background-color: #222;
+    color: white;
+}
+
+.map>div>:nth-child(3) div {
+    justify-content: center;
+    max-width: 500px;
+    margin: auto;
+}
+
+.map>div>:nth-child(3) h3 {
+    margin: 20px 0;
+}
+
+.map>div>:nth-child(3) div section {
+    width: 45%;
+    font-weight: bold;
+    margin: 10px 0 5px;
+    cursor: pointer;
+}
+
+.map>div>:nth-child(3) div section div {
+    background-color: #eee;
+    background-size: 55%;
+    border-radius: 50%;
+    width: 90px;
+    height: 90px;
+    margin: auto;
+    position: relative;
+}
+
+.map>div>:nth-child(3) div section div img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40px;
+    filter: brightness(0%);
+}
+
+.map>div>:nth-child(3) div section p {
+    margin-top: 15px;
+}
+
+.map>div>:nth-child(3) div section div:hover {
+    transition: 0.3s ease-in-out;
+    box-shadow: 0px 0px 8px rgb(95, 155, 189);
+    border: 0;
+}
+
+.cs {
+    background-color: #19191f;
+    color: white;
+}
+
+.cs>div>:first-child {
+    margin-bottom: 40px;
+}
+
+.cs>div>:first-child h2 span {
+    font-family: 'Cabin', sans-serif;
+}
+
+.cs>div>:last-child>div {
+    width: 100%;
+    max-width: 480px;
+    margin: 0 auto 0;
+}
+
+.cs>div>:last-child div h3 {
+    text-align: left;
+    margin-bottom: 8px;
+}
+
+.cs>div>:last-child div input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: 0;
+    margin: 8px 0;
+    border-radius: 3px;
+    background-color: #2d2d37;
+}
+
+.cs>div>:last-child div input[type="text"]::placeholder {
+    color: #ccc
+}
+
+.cs>div>:last-child div textarea {
+    width: 100%;
+    padding: 5px 10px;
+    border: 0;
+    margin: 8px 0;
+    border-radius: 3px;
+    background-color: #2d2d37;
+    resize: none;
+}
+
+.cs>div>:last-child div textarea::placeholder {
+    color: #ccc;
+}
+
+.cs>div>:last-child>:first-child>:nth-child(4) {
+    margin-top: 10px;
+}
+
+.cs>div>:last-child div input[type="checkbox"] {
+    display: none;
+}
+
+.cs>div>:last-child div input[type="checkbox"]+label {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    background-color: #2d2d37;
+    position: relative;
+    margin: auto 0;
+    cursor: pointer;
+}
+
+.cs>div>:last-child div input[id="check1"]:checked+label::after {
+    content: "✔";
+    position: absolute;
+    bottom: -2px;
+    left: 1px;
+    color: #ccc;
+}
+
+.cs>div>:last-child div p {
+    color: #ccc;
+    font-weight: bold;
+    margin: auto 8px;
+}
+
+.cs>div>:last-child>:first-child button {
+    background: none;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    padding: 3px 10px;
+}
+
+.cs>div>:last-child>:first-child button a {
+    color: #ccc;
+}
+
+.cs>div>:last-child>button {
+    width: 100%;
+    max-width: 480px;
+    margin: auto;
+    background-color: white;
+    margin-top: 30px;
+}
+
+.cs>div>:last-child>button a {
+    color: black;
+}
+
+footer {
+    background-color: #f5f5f5;
+}
+
+footer>div {
+    padding: 50px 8% 150px;
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+footer>div>:first-child {
+    width: 100%;
+}
+
+footer>div>:first-child img {
+    filter: invert(1);
+    margin: auto;
+}
+
+footer>div>:nth-child(2) {
+    margin: 30px 0;
+    width: 100%;
+    max-width: 600px;
+}
+
+footer>div>:nth-child(2) {
+    font-weight: bold;
+}
+
+footer>div>:nth-child(3) {
+    width: 80%;
+    margin: auto;
+}
+
+footer>div>:nth-child(3) img {
+    filter: invert(1);
+    transition: 0.3s;
+    width: 20px;
+}
+
+footer>div>:nth-child(3) img:first-of-type {
+    width: 120px;
+}
+
+footer>div>:nth-child(3) img:hover {
+    opacity: 0.5;
+}
+
+footer>div>:nth-child(4) {
+    margin: 40px 0 20px;
+    padding: 30px 10px;
+    width: 100%;
+    background-color: #ddd;
+}
+
+footer>div>:nth-child(4) h3 {
+    font-family: 'Cabin', sans-serif;
+    font-style: italic;
+    margin-bottom: 10px;
+}
+
+footer>div>:nth-child(4) ul li {
+    margin-top: 5px;
+}
+
+footer>div>ul {
+    width: 100%;
+}
+
+footer>div>ul li {
+    color: #555;
+    margin: 8px 0;
+}
+
+footer>div>ul li:hover {
+    color: black;
+}
+
+footer>div>:nth-child(6) {
+    width: 100%;
+}
+
+footer>div>:nth-child(6) p {
+    margin-top: 40px;
+}
+
+.select-menu {
+    border: 1px solid #ccc;
+    padding: 5px 10px;
+    width: 100%;
+    position: relative;
+    cursor: pointer;
+    margin-top: 30px;
+}
+
+footer>div>:last-child .select-btn {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+}
+
+footer>div>:last-child .select-btn span {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #555;
+}
+
+footer>div>:last-child .select-btn img {
+    width: 12px;
+    margin: auto 0;
+    opacity: 0.7;
+}
+
+.select-menu>div {
+    overflow: hidden;
+}
+
+.select-menu .options {
+    position: absolute;
+    top: -210px;
+    left: 0;
+    width: 100%;
+    background-color: #19191f;
+    padding: 10px;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.4s;
+    text-align: left;
+}
+
+.select-menu .options li {
+    margin: 20px 0;
+    color: #aaa
+}
+
+.select-menu .options li:hover {
+    color: white;
+}
+
+.select-menu.active .options {
+    opacity: 1;
+    visibility: unset;
+    top: -250px;
+}
+
+/* laptop 1366px*/
+
+@media screen and (min-width: 1366px) {
+
+    h1 {
+        font-size: 3rem;
+        font-weight: bold;
+        line-height: 3.5rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    h3 {
+        font-size: 1.2rem;
+        line-height: 1.8rem;
+    }
+
+    h4 {
+        font-size: 1.2rem;
+    }
+
+    p,
+    li {
+        font-size: 0.9rem;
+    }
+
+    article>div:not(.news>div) {
+        padding: 120px 0;
+    }
+
+    .pc {
+        display: block;
+    }
+
+    .pc-flex {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .mo {
+        display: none;
+    }
+
+    main>div header {
+        padding: 30px 0;
+    }
+
+    main>div header>div>:last-child img {
+        margin-left: 10px;
+    }
+
+    nav {
+        position: unset;
+        background: none;
+        overflow: hidden;
+        padding: 0;
+        margin: auto;
+        height: auto;
+        color: white;
+    }
+
+    nav>div {
+        padding: 0;
+        width: 700px;
+        margin: auto;
+    }
+
+    .mainMenu {
+        display: flex;
+        justify-content: space-between;
+        padding: 0;
+        margin: 0;
+        flex-wrap: nowrap;
+    }
+
+    .mainMenu>li {
+        display: inline-block;
+        padding: 0;
+    }
+
+    .mainMenu>li a {
+        color: white;
+    }
+  
+  .mainMenu>li:hover {
+    background-color: transparent;
+    }
+
+    main>div>div section {
+        height: 800px;
+    }
+
+    main>div>div section>:last-child img {
+        height: 800px;
+    }
+
+    .main-slide .slick-dots>li {
+        height: 12px;
+    }
+
+    main>div>div section {
+        text-align: left;
+    }
+
+    main>div>div section>:first-child {
+        top: 30%;
+        left: 17%;
+    }
+
+    main>div>div section>:first-child h1 {
+        margin: 20px 0 30px;
+        font-size: 3rem;
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    main>div>div section>:first-child div {
+        margin: 0;
+    }
+
+    .toggle-btn {
+        display: none;
+    }
+
+    .main-slide .slick-dots {
+        bottom: 150px;
+    }
+
+    .check-estimate {
+        top: 750px;
+    }
+
+    .check-estimate section {
+        padding: 50px 30px;
+    }
+  
+    .check-estimate section h4{
+        font-size: 1.2rem;
+  }
+
+    .calculator>:first-child,
+    .model>:first-child {
+        padding: 50px;
+        width: 1000px;
+    }
+
+    .model div section>div {
+        flex-flow: row-reverse;
+    }
+
+    .model div section>div>:first-child {
+        width: 250px;
+        height: 350px;
+        margin: auto 0;
+        position: relative;
+    }
+
+    .model div section>div>:first-child>div {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 80%
+    }
+
+    .model div section ul {
+        width: 200px;
+    }
+
+    .search-pop {
+        right: 0;
+        transform: translateX(25%);
+    }
+
+    .bottomMenu {
+        position: unset;
+        width: 1000px;
+        margin: 100px auto 0;
+        padding: 50px 0;
+        border-radius: 0;
+        box-shadow: 0px 0px 0px #ddd;
+    }
+
+    .bottomMenu>:first-child {
+        width: 250px;
+        margin: auto 0;
+    }
+
+    .bottomMenu>:first-child p {
+        text-align: left;
+    }
+
+    .bottomMenu div img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .bottomMenu div p {
+        font-size: 1rem;
+    }
+
+    .kia-data {
+        margin-bottom: 120px;
+    }
+
+    .kia-data>div>:nth-child(3)>:first-child>:last-child {
+        padding: 30px 5% 100px;
+    }
+
+    .kia-data>div>:nth-child(3)>:first-child {
+        margin: auto 0;
+    }
+
+    .kia-data>div>:nth-child(3)>:nth-child(2)>div {
+        margin-top: 0px;
+    }
+
+    .kia-data>div>:nth-child(3)>:nth-child(2)>div>div .graph {
+        height: 300px;
+    }
+
+    .kia-data>div>:nth-child(3)>:last-child {
+        margin: auto 0;
+    }
+
+    .event>div>div {
+        padding-bottom: 0px;
+    }
+
+    .event>div>div>:first-child section {
+        margin-bottom: 40px;
+    }
+
+    .best>div>div>p:first-of-type {
+        margin: 50px 0 8px;
+    }
+
+    .best>div ul,
+    .calculator>:first-child ul,
+    .model>:first-child>ul {
+        justify-content: space-around;
+    }
+
+    .best>div div>div section {
+        width: 320px;
+        padding: 20px;
+    }
+
+    .numberPic {
+        font-size: 2rem;
+    }
+
+    .news>div>div {
+        width: 1000px;
+        margin: 0 auto;
+        padding: 150px 0;
+    }
+
+    .news>div>div section {
+        width: 240px;
+    }
+
+    .news>div>div section P:last-of-type {
+        height: 85px;
+    }
+
+    .map>div>:first-child {
+        display: block;
+        filter: grayscale(0.4);
+    }
+
+    .map>div>:nth-child(2) {
+        position: absolute;
+        bottom: 10%;
+        right: 5%;
+        transform: translate(-0%, -50%);
+        padding: 40px;
+    }
+
+    .map>div>:nth-child(2) h2 {
+        font-size: 1.2rem;
+    }
+
+    .map>div>:nth-child(3) h3 {
+        text-align: left;
+        margin: 35px 0 20px;
+    }
+
+    .map>div>:nth-child(3) div {
+        margin: 0;
+    }
+
+    .map>div>:nth-child(3) div section {
+        width: 90px;
+    }
+
+    .map>div>:nth-child(3) div {
+        justify-content: space-between;
+        width: 600px;
+    }
+
+    .local-search-pop {
+        width: 350px;
+        margin: auto;
+        right: 10%;
+    }
+
+    .cs>div>:last-child>div {
+        margin: 0;
+    }
+
+    .cs>div>:last-child>:nth-child(2) button {
+        width: 100%;
+        max-width: 480px;
+        background-color: white;
+        margin-top: 30px;
+    }
+
+    .cs>div>:last-child>:nth-child(2)button a {
+        color: black;
+    }
+  
+  .cs>div>:last-child>:first-child>:nth-child(4) {
+        justify-content: left;
+    }
+
+    footer>div {
+        padding: 100px 0 150px;
+    }
+
+    footer>div>:first-child img {
+        margin: 0;
+    }
+
+    footer>div>:nth-child(4) {
+        order: 1;
+        width: 350px;
+    }
+
+    footer>div>:nth-child(2) {
+        order: 2;
+    }
+
+    footer>div>:nth-child(2) li {
+        text-align: left;
+    }
+
+    footer>div>:nth-child(2) li ul li {
+        color: #aaa;
+        font-weight: 300;
+    }
+
+    footer>div>:nth-child(2) li ul li:hover {
+        color: #555;
+    }
+
+    footer>div>:nth-child(5) {
+        order: 3;
+        text-align: left;
+        width: 600px;
+    }
+
+    footer>div>:nth-child(3) {
+        order: 4;
+        width: 200px;
+        height: 25px;
+        margin: 0;
+    }
+
+    footer>div>:nth-child(4) {
+        margin: 30px 0;
+    }
+
+    footer>div>:last-child {
+        order: 7;
+        width: 300px;
+    }
+
+    footer>div>:last-child p {
+        text-align: right;
+    }
+
+    footer>div>:last-child>:first-child img {
+        filter: invert(1);
+        transition: 0.3s;
+        width: 20px;
+    }
+
+    footer>div>:last-child>:first-child img:first-of-type {
+        width: 120px;
+    }
+
+    footer>div>:last-child>:first-child img:hover {
+        opacity: 0.5;
+    }
+
+}
+    </style>
+
+    <main>
+        <div>
+
+            <header id="nav-scroll">
+                <div>
+
+                    <img class="logo-img"
+                        src="https://www.kia.com/etc.clientlibs/kwp-global/clientlibs/clientlib-site/resources/images/common/logo_w.svg">
+
+                    <nav class="menu-nav" id="menu-nav">
+                        <div>
+                            <div class="mo">
+                                <p class="nav-close-btn" onclick="closeNavMenu()">✕</p>
+                                <div class="display-flex-flow">
+                                    <button onclick="openPreparing()">
+                                        <img
+                                            src="https://www.kia.com/content/dam/kwp/kr/ko/common/icon/icon_home_1.svg">
+                                        <a>기아 멤버스</a>
+                                    </button>
+                                    <button onclick="openPreparing()"><a>드라이빙 아카데미</a></button>
+                                </div>
+                                <div>
+                                    <div class="display-flex-flow">
+                                        <div>
+                                            <h4>로그인 <span>해주세요</span></h4>
+                                            <p>회원가입 후 더 많은 혜택을 받아보세요</p>
+                                        </div>
+                                        <div>+ 간편회원가입</div>
+                                    </div>
+                                    <div class="display-flex-flow">
+                                        <button><a>로그인</a></button>
+                                        <button><a>장바구니</a></button>
+                                    </div>
+                                </div>
+                                <input type="text" placeholder="궁금하신 제품을 찾아보세요.">
+                            </div>
+                            <ul id="mainMenu" class="mainMenu">
+                                <li><a>home</a></li>
+                                <li><a>purchase</a></li>
+                                <li><a>event</a></li>
+                                <li><a>faq</a></li>
+                                <li><a>qna</a></li>
+                                <li><a>news</a></li>
+                                <li><a>join us</a></li>
+                                <li><a>login</a></li>
+                                <li><a>remove</a></li>
+                            </ul>
+                            <div class="display-flex-flow mo">
+                                <section class="navCateButton" onclick="openCalculator()">
+                                    <img
+                                        src="https://www.kia.com/content/dam/kwp/kr/ko/common/icon/subnav_util_icon01.svg">
+                                    <p>견적 내기</p>
+                                </section>
+                                <section class="navCateButton" onclick="openModel()">
+                                    <img
+                                        src="https://www.kia.com/content/dam/kwp/kr/ko/common/icon/subnav_util_icon05.svg">
+                                    <p>카탈로그/가격표</p>
+                                </section>
+                                <section class="navCateButton" onclick="openPreparing()">
+                                    <img
+                                        src="https://www.kia.com/content/dam/kwp/kr/ko/common/icon/subnav_util_icon02.svg">
+                                    <p>시승 신청</p>
+                                </section>
+                                <section class="navCateButton" onclick="openPreparing()">
+                                    <img
+                                        src="https://www.kia.com/content/dam/kwp/kr/ko/common/icon/subnav_util_icon04.svg">
+                                    <p>kIA 이벤트</p>
+                                </section>
+                            </div>
+                        </div>
+                    </nav>
+
+                    <div class="header-icons">
+                        <div class="pc">
+                            <img src="https://cdn-icons-png.flaticon.com/128/4674/4674426.png">
+                        </div>
+                        <div class="select-lan">
+                            <img class="language-btn" onclick="openLanguageOption()"
+                                src="https://www.kia.com/content/dam/kwp/descriptive/ic_global_w.svg">
+                            <ul class="lan-options">
+                                <li class="lan-option">kr</li>
+                                <li class="lan-option">en</li>
+                                <li class="lan-option">cn</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <img class="search-btn" onclick="openSearch()"
+                                src="https://www.kia.com/content/dam/kwp/kr/ko/common/icon/icon_top_util_search.svg">
+                        </div>
+                        <div class="mo">
+                            <img class="nav-open-btn" id="nav-open-btn" onclick="openNavMenu()"
+                                src="https://cdn-icons-png.flaticon.com/128/7710/7710488.png">
+                        </div>
+                    </div>
+
+                </div>
+            </header>
+
+            <div>
+                <div class="main-slide">
+                    <section>
+                        <div>
+                            <h4>새로운 도심 엔트리 EV</h4>
+                            <h1>The Kia Ray EV</h1>
+                            <div class="display-flex-flow">
+                                <button class="more-btn" onclick="openModel()"><a>자세히 보기</a></button>
+                                <button class="price-btn" onclick="openCalculator()"><a>견적 내기</a></button>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="mo">
+                                <img
+                                    src="https://www.kia.com/content/dam/kwp/kr/ko/main-kv-contents/202308/kv_rayev_contract_mo.jpg">
+                            </div>
+                            <div class="pc">
+                                <img
+                                    src="https://www.kia.com/content/dam/kwp/kr/ko/main-kv-contents/202308/kv_rayev_contract_pc.jpg">
+                            </div>
+                            <div></div> <!---검정 그라데이션-->
+                            </img>
+                    </section>
+                    <section>
+                        <div>
+                            <h4>호남지역 최초 기아 모빌리티 체험공간</h4>
+                            <h1>기아 광주 플래그십스토어 Open</h1>
+                            <div>
+                                <button onclick="openModel()"><a>바로 가기</a></button>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="mo">
+                                <img
+                                    src="https://www.kia.com/content/dam/kwp/kr/ko/main-kv-contents/202309/kv_gwangju_flagshipstore_20230920_mo.jpg">
+                            </div>
+                            <div class="pc">
+                                <img
+                                    src="https://www.kia.com/content/dam/kwp/kr/ko/main-kv-contents/202309/kv_gwangju_flagshipstore_20230920_pc.jpg">
+                            </div>
+                            <div></div> <!---검정 그라데이션-->
+                        </div>
+                    </section>
+                    <section>
+                        <div>
+                            <h4>The Mainstream</h4>
+                            <h1>The New Sorento</h1>
+                            <div class="display-flex-flow">
+                                <button class="more-btn" onclick="openModel()"><a>자세히 보기</a></button>
+                                <button class="price-btn" onclick="openCalculator()"><a>견적 내기</a></button>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="mo">
+                                <img
+                                    src="https://www.kia.com/content/dam/kwp/kr/ko/main-kv-contents/202308/kv_sorento_pe_20230818_mo.jpg">
+                            </div>
+                            <div class="pc">
+                                <img
+                                    src="https://www.kia.com/content/dam/kwp/kr/ko/main-kv-contents/202308/kv_sorento_pe_20230818_pc.jpg">
+                            </div>
+                            <div></div> <!---검정 그라데이션-->
+                        </div>
+                    </section>
+                    <section>
+                        <div>
+                            <h4>도심 밀착 모빌리티</h4>
+                            <h1>The New Morning</h1>
+                            <div class="display-flex-flow">
+                                <button class="more-btn" onclick="openModel()"><a>자세히 보기</a></button>
+                                <button class="price-btn" onclick="openCalculator()"><a>견적 내기</a></button>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="mo">
+                                <img
+                                    src="https://www.kia.com/content/dam/kwp/kr/ko/main-kv-contents/202307/kv_morning_pe_20230705_mo.jpg">
+                            </div>
+                            <div class="pc">
+                                <img
+                                    src="https://www.kia.com/content/dam/kwp/kr/ko/main-kv-contents/202307/kv_morning_pe_20230705_pc.jpg">
+                            </div>
+                            <div></div> <!---검정 그라데이션-->
+                        </div>
+                    </section>
+                    <section>
+                        <div>
+                            <h4>모두에게 처음</h4>
+                            <h1>The Kia EV9</h1>
+                            <div class="display-flex-flow">
+                                <button class="more-btn" onclick="openModel()"><a>자세히 보기</a></button>
+                                <button class="price-btn" onclick="openCalculator()"><a>견적 내기</a></button>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="mo">
+                                <img
+                                    src="https://www.kia.com/content/dam/kwp/kr/ko/main-kv-contents/202305/kv_ev9_contract_230503_mo.jpg">
+                            </div>
+                            <div class="pc">
+                                <img
+                                    src="https://www.kia.com/content/dam/kwp/kr/ko/main-kv-contents/202305/kv_ev9_contract_230503_pc.jpg">
+                            </div>
+                            <div></div> <!---검정 그라데이션-->
+                        </div>
+                    </section>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+
+    <script>
+        // 네비게이션
+        const navBar = document.querySelector("#menu-nav");
+        const navMenu = document.querySelector("#nav-open-btn");
+        const closeMenu = document.querySelector(".nav-close-btn");
+
+        function openNavMenu() {
+            navBar.style.left = "0";
+            navBar.style.transition = "0.3s";
+            document.body.style.overflow = "hidden";
+        };
+        function closeNavMenu() {
+            navBar.style.left = "100%";
+            document.body.style.overflowY = "scroll";
+        };
+
+
+        // 네비게이션 버튼 호버
+        const navCateButtons = document.querySelectorAll(".navCateButton");
+
+        for (let i = 0; i < navCateButtons.length; i++) {
+            navCateButtons[i].addEventListener("mouseover", function () {
+                clearNavCateButton();
+
+                this.style.color = "white";
+                this.style.backgroundColor = "rgb(69, 145, 189)";
+                this.firstElementChild.style.filter = "brightness(100)";
+                this.style.transition = "0.3s";
+            });
+            function clearNavCateButton() {
+                navCateButtons[i].addEventListener("mouseout", function () {
+
+                    navCateButtons[i].style.color = "black";
+                    navCateButtons[i].style.backgroundColor = "transparent";
+                    navCateButtons[i].firstElementChild.style.filter = "none";
+                });
+            };
+        }
+
+        // 메인 슬라이드
+        $('.main-slide').slick({
+            centerMode: false,
+            slidesToShow: 1,
+            infinite: true,
+            slidesToScroll: 1,
+            autoplay: true,
+            autoplaySpeed: 3000,
+            draggable: true,
+            arrow: false,
+            dots: true,
+            pauseOnHover: false,
+        });
+
+        /* 스크립트 적용 시, 모바일 새로고침 후 화면 너비 늘리면 position fixed가 그대로
+        if (document.body.clientWidth < 600) {
+            // 스크롤 내리면 하단메뉴 나타남
+            $(document).ready(function () {
+
+                const navHeight = $("main").height();
+                //navHeight 의 높이를 구하기
+
+                $(".bottomMenu").hide();
+                //스크롤시 나타날 객체 미리 숨기기
+
+                $(window).scroll(function () {  // 윈도우 스크롤 기능 작동
+                    const rollIt = $(this).scrollTop() >= navHeight;
+                    // 스크롤의 정도가 navHeight 의 값을 넘었을 때 == 윈도우 스크롤의 값이 navHeight 의 높이와 같거나 크다
+                    
+                    // scrollTop 은 윈도우에서 스크롤의 위치가 가장 상위에 있다는 의미로 해석
+                    // 스크롤의 위치가 화면 아래일수록 == scrollTop 의 값이 커짐
+                    
+                    if (rollIt) {
+                        //윈도우 스크롤 기능의 값이 navHeight 의 높이와 같거나 크면
+                        $(".bottomMenu").show().css({ "position": "fixed" });
+                    }
+                    else {
+                        $(".bottomMenu").hide();
+                    }
+                    
+                });
+            }); 
+        }; 
+        */
+
+    </script>
+
+
+    <div class="check-estimate">
+        <section id="cal-pop" onclick="openCalculator()">
+            <h4>차량별 할부 계산기</h4>
+            <img src="https://cdn-icons-png.flaticon.com/128/271/271228.png">
+        </section>
+        <section id="model-pop" onclick="openModel()">
+            <h4>모델 비교</h4>
+            <img src="https://cdn-icons-png.flaticon.com/128/271/271228.png">
+        </section>
+    </div>
+
+    <div class="calculator">
+        <div>
+            <p class="close-calculator" onclick="closeCalculator()">✕</p>
+            <h3>할부 계산기</h3>
+            <ul id="cal-listtap">
+                <li class="tapsee">카니발</li>
+                <li>3.5 가솔린</li>
+                <li>프레스티지</li>
+            </ul>
+            <div class="pay">
+                <p>선수금</p>
+                <div class="slidecontainer flex_between_center">
+                    <div class="pst">
+                        <p class="p2-1">32만원</p>
+                        <p class="p2-2">2,882만원</p>
+                        <input type="range" min="32" max="2882" step="10" value="30" class="sliderRange" id="myRange"
+                            tooltips="">
+                    </div>
+                    <p class="box"><span id="demo"></span> 만원</p>
+                </div>
+            </div>
+            <div>
+                <p>할부 기간</p>
+                <div class="slidecontainer flex_between_center">
+                    <div class="pst">
+                        <p class="p2-1">3개월</p>
+                        <p class="p2-2">60개월</p>
+                        <input type="range" min="3" max="60" step="1" value="3" class="sliderRange2" id="myRange1">
+                    </div>
+                    <p class="box"><span id="value"></span> 개월</p>
+                </div>
+            </div>
+            <button><a>할부 상품 자세히 보기</a></button>
+        </div>
+        <div id="cal-black"></div> <!---창 띄우면 바깥배경 어둡게 -->
+    </div>
+
+    <div class="model">
+        <div>
+            <p class="close-model" onclick="closeModel()">✕</p>
+            <h3>모델 비교</h3>
+            <ul id="model-listtap">
+                <li class="tapsee">카니발</li>
+                <li>3.5 가솔린</li>
+                <li>프레스티지</li>
+            </ul>
+            <div>
+                <section class="model1" id="model-list1">
+                    <div>
+                        <div>
+                            <div>
+                                <img src="https://cdn-icons-png.flaticon.com/128/43/43869.png">
+                                <p>비교할 모델을 추가해주세요.</p>
+                            </div>
+                        </div>
+                        <ul>
+                            <li>가격<br>
+                                <span>31,800,000원</span>
+                            </li>
+                            <li>복합 연비<br>
+                                <span>9.1 km/ℓ</span>
+                            </li>
+                            <li>최고 출력<br>
+                                <span>294 ps / 6,400 rpm</span>
+                            </li>
+                            <li>최대 토크<br>
+                                <span>36.2 kg.m / 5,000 rpm</span>
+                            </li>
+                            <li>3년 유지비<br>
+                                <span>14,107,685원</span>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+                <section class="model2" id="model-list2">
+                    <div>
+                        <div>
+                            <div>
+                                <img src="https://cdn-icons-png.flaticon.com/128/43/43869.png">
+                                <p>비교할 모델을 추가해주세요.</p>
+                            </div>
+                        </div>
+                        <ul>
+                            <li>가격<br>
+                                <span>40,730,000원</span>
+                            </li>
+                            <li>복합 연비<br>
+                                <span>15.2 km/ℓ</span>
+                            </li>
+                            <li>최고 출력<br>
+                                <span>180 ps / 5,500 rpm</span>
+                            </li>
+                            <li>최대 토크<br>
+                                <span>27 kg.m / 1,500~4,500 rpm</span>
+                            </li>
+                            <li>3년 유지비<br>
+                                <span>10,123,011원</span>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+                <section class="model3" id="model-list3">
+                    <div>
+                        <div>
+                            <div>
+                                <img src="https://cdn-icons-png.flaticon.com/128/43/43869.png">
+                                <p>비교할 모델을 추가해주세요.</p>
+                            </div>
+                        </div>
+                        <ul>
+                            <li>가격<br>
+                                <span>55,340,000원</span>
+                            </li>
+                            <li>복합 연비<br>
+                                <span> 9.3 km/ℓ</span>
+                            </li>
+                            <li>최고 출력<br>
+                                <span>257 ps / 3,800 rpm</span>
+                            </li>
+                            <li>최대 토크<br>
+                                <span>36.2 kg.m / 1,500~3,000 rpm</span>
+                            </li>
+                            <li>3년 유지비<br>
+                                <span>15,322,685원</span>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+            </div>
+        </div>
+        <div id="model-black"></div> <!---창 띄우면 바깥배경 어둡게? -->
+    </div>
+
+    <script>
+        // 팝업창
+        const calPopup = document.querySelector("#cal-pop");
+        const modelPopup = document.querySelector("#model-pop");
+
+        function openCalculator() {
+            // #cal-pop 클릭하면
+            document.querySelector(".calculator").style.display = "block";
+            document.querySelector(".bottomMenu").style.display = "none";
+        }
+        function closeCalculator() {
+            // .close-calculator 클릭하면
+            document.querySelector(".calculator").style.display = "none";
+            document.querySelector(".bottomMenu").style.display = "flex";
+        }
+
+        function openModel() {
+            // #model-pop 클릭하면
+            document.querySelector(".model").style.display = "block";
+            document.querySelector(".bottomMenu").style.display = "none";
+        }
+        function closeModel() {
+            // .close-model 클릭하면
+            document.querySelector(".model").style.display = "none";
+            document.querySelector(".bottomMenu").style.display = "flex";
+        }
+        function openPreparing() {
+            alert('준비중입니다.');
+        }
+
+        // 할부 계산기 스크롤 게이지 색상
+        document.querySelector('.sliderRange').addEventListener('input', function (event) {
+            // .sliderRange : 할부계산기 input
+            // input 이벤트 발생 > 함수 실행
+            var gradient_value = 100 / event.target.attributes.max.value;
+            event.target.style.background = 'linear-gradient(to right, #262846 0%, #262846 ' + gradient_value * event.target.value + '%, #eee ' + gradient_value * event.target.value + '%, #eee';
+        });
+
+        document.querySelector('.sliderRange2').addEventListener('input', function (event) {
+            var gradient_value = 100 / event.target.attributes.max.value;
+            event.target.style.background = 'linear-gradient(to right, #262846 0%, #262846 ' + gradient_value * event.target.value + '%, #eee ' + gradient_value * event.target.value + '%, #eee';
+        });
+
+        // 할부 계산기
+        const rangeSlider = document.getElementById("myRange");
+        // myRange 아이디를 돔으로 연결
+        var output = document.getElementById("demo");
+        // demo 아이디를 돔으로 연결
+        output.innerHTML = rangeSlider.value;
+        //demo 안에 rangeSlider의 값을 넣어
+        // value : 32
+
+        rangeSlider.oninput = function () {
+            output.innerHTML = this.value;
+        }
+        // oninput: input 태그 안의 값들이 변경 될때마다 이벤트가 발생
+        // demo 안에 this(rangeSlider.oninput)의 값을 넣어
+        // 동그라미 움직이면 숫자가 지속적으로 변경됨
+
+        const pst = document.getElementById("myRange1");
+        const value = document.getElementById("value");
+        value.textContent = pst.value;
+        pst.oninput = function () {
+            value.textContent = this.value;
+        }
+
+        // 할부계산기 리스트
+        const calculatorList = document.querySelectorAll("#cal-listtap > li");
+
+        for (let i = 0; i < calculatorList.length; i++) {
+            calculatorList[i].addEventListener("click", function () {
+                clearCalculatorTap();
+                this.classList.add("tapsee");
+
+            });
+        }
+        function clearCalculatorTap() {
+            for (let i = 0; i < calculatorList.length; i++) {
+                calculatorList[i].classList.remove("tapsee");
+            }
+        }
+
+        // 모델비교 리스트
+        const modelList = document.querySelectorAll("#model-listtap > li");
+
+        for (let i = 0; i < modelList.length; i++) {
+            modelList[i].addEventListener("click", function () {
+
+                clearModelTap();
+
+                this.classList.add("tapsee");
+
+                if (i == 0) {
+                    document.querySelector(".model1").style.display = "block";
+                    document.querySelector(".model2").style.display = "none";
+                    document.querySelector(".model3").style.display = "none";
+                }
+                else if (i == 1) {
+                    document.querySelector(".model1").style.display = "none";
+                    document.querySelector(".model2").style.display = "block";
+                    document.querySelector(".model3").style.display = "none";
+                }
+                else if (i == 2) {
+                    document.querySelector(".model1").style.display = "none";
+                    document.querySelector(".model2").style.display = "none";
+                    document.querySelector(".model3").style.display = "block";
+                }
+            });
+        }
+        function clearModelTap() {
+            for (let i = 0; i < modelList.length; i++) {
+                modelList[i].classList.remove("tapsee");
+            }
+        }
+
+    </script>
+
+
+
+    <div class="bottomMenu">
+        <div class="pc">
+            <h2>kia category</h2>
+            <p>원하는 카테고리 선택으로 서비스를 빠르게 찾아보세요.</p>
+        </div>
+        <div class="bottomMenu-btn">
+            <div class="mo">
+                <img onclick="openCalculator()"
+                    src="https://www.kia.com/content/dam/kwp/kr/ko/common/icon/subnav_util_icon01.svg"
+                    style="filter: brightness(0);">
+                <p>견적내기</p>
+            </div>
+            <div class="pc" id="productsee-btn">
+                <img src="https://cdn-icons-png.flaticon.com/128/7257/7257795.png">
+                <p>상품보기</p>
+            </div>
+        </div>
+        <div class="bottomMenu-btn">
+            <div class="mo">
+                <img onclick="openModel()" src="https://cdn-icons-png.flaticon.com/128/8621/8621758.png">
+                <p>모델 비교</p>
+            </div>
+            <div class="pc" id="news-btn">
+                <img src="https://cdn-icons-png.flaticon.com/128/5480/5480180.png">
+                <p>뉴스</p>
+            </div>
+        </div>
+        <div class="bottomMenu-btn">
+            <div>
+                <img src="https://cdn-icons-png.flaticon.com/128/4674/4674426.png">
+                <p>마이페이지</p>
+            </div>
+        </div>
+        <div class="bottomMenu-btn" id="cs-btn">
+            <div>
+                <img src="https://cdn-icons-png.flaticon.com/128/984/984199.png">
+                <p>문의하기</p>
+            </div>
+        </div>
+        <div class="bottomMenu-btn">
+            <div class="mo">
+                <img onclick="openNavMenu()" src="https://cdn-icons-png.flaticon.com/128/7710/7710488.png">
+                <p>전체 메뉴</p>
+            </div>
+            <div class="pc" id="cate-menu-btn">
+                <img src="https://cdn-icons-png.flaticon.com/128/7710/7710488.png">
+                <p>메뉴</p>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        const bottomMenuButtons = document.querySelectorAll(".bottomMenu-btn");
+
+        for (let i = 0; i < bottomMenuButtons.length; i++) {
+            bottomMenuButtons[i].addEventListener("mouseover", function () {
+                clearCateButton();
+                this.lastElementChild.style.color = "rgb(95, 155, 189)";
+                this.lastElementChild.style.transition = "0.3";
+            })
+            function clearCateButton() {
+                for (let i = 0; i < bottomMenuButtons.length; i++) {
+                    bottomMenuButtons[i].addEventListener("mouseout", function () {
+                        bottomMenuButtons[i].lastElementChild.style.color = "black";
+                    })
+                }
+            }
+        }
+
+        $(document).ready(function () {
+            $('#cate-menu-btn').click(function () {
+                let offset = $('header').offset();
+                //선택한 태그의 위치를 반환
+                //animate()메서드를 이용해서 선택한 태그의 스크롤 위치를 지정해서 0.4초 동안 부드럽게 해당 위치로 이동함 
+                $('html').animate({ scrollTop: offset.top }, 1000);
+            });
+            $('#cs-btn').click(function () {
+                let offset = $('.cs').offset(); //선택한 
+                $('html').animate({ scrollTop: offset.top }, 1000);
+            });
+            $('#productsee-btn').click(function () {
+                let offset = $('.best').offset(); //선택한 
+                $('html').animate({ scrollTop: offset.top }, 1000);
+            });
+            $('#news-btn').click(function () {
+                let offset = $('.news').offset(); //선택한 
+                $('html').animate({ scrollTop: offset.top }, 1000);
+            });
+        });
+    </script>
+
+
+    <div class="search-pop">
+        <div>
+            <div class="display-flex-flow">
+                <input type="text" placeholder="search">
+                <img src="https://www.kia.com/content/dam/kwp/kr/ko/common/icon/icon_top_util_search.svg">
+            </div>
+            <div class="display-flex-flow">
+                <p>인기 검색어</p>
+                <div>
+                    <button>카니발</button>
+                    <button>소렌토</button>
+                    <button>스포티지</button>
+                    <button>K5</button>
+                </div>
+            </div>
+            <div>
+                <button class="close-search">닫기</button>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        // 언어 선택
+        const languageOptions = document.querySelector(".lan-options");
+        const searchPopup = document.querySelector(".search-pop");
+
+        function openLanguageOption() {
+            if (languageOptions.style.opacity === '0' || languageOptions.style.opacity === '') {
+                languageOptions.style.opacity = "1";
+                searchPopup.style.opacity = "0";
+            } else {
+                languageOptions.style.opacity = "0";
+            }
+        }
+        // 검색
+        function openSearch() {
+            searchPopup.style.opacity = "1";
+            searchPopup.style.top = "70px";
+            searchPopup.style.visibility = "unset";
+
+            document.querySelector(".close-search").addEventListener("click", function () {
+                searchPopup.style.opacity = "0";
+                searchPopup.style.top = "50px";
+                searchPopup.style.visibility = "hidden";
+            });
+
+        }
+    </script>
+
+
+    <article class="kia-data">
+        <div>
+
+            <h2>빅데이터로 보는 <span>kia</span></h2>
+            <p>문의부터 계약까지, 한눈에 보는 KIA 현황</p>
+
+            <div class="display-flex-flow">
+                <div>
+                    <section class="display-flex-flow">
+                        <p>금주 문의</p>
+                        <h3 class="count-ani1"><span class="data-count1"></span></h3>
+                    </section>
+                    <section class="display-flex-flow">
+                        <p>누적 문의</p>
+                        <h3 class="count-ani2"><span class="data-count2"></span></h3>
+                    </section>
+                    <div class="display-flex-flow">
+                        <div>
+                            <h3>금주 계약차량 BEST</h3>
+                            <h2>카니발</h2>
+                        </div>
+                        <img data-aos="fade-left"
+                            src="https://www.kia.com/content/dam/kwp/kr/ko/vehicles/represent/krkp027/carnival_kpjg7ad34_a_p2m.png?imwidth=640">
+                    </div>
+                </div>
+                <div>
+                    <div class="display-flex-flow" id="chart-animation">
+                        <div>
+                            <div class="graph stack1">
+                                <span data-aos="fade-up"></span>
+                            </div>
+                            <p>카니발
+                        </div>
+                        <div>
+                            <div class="graph stack2">
+                                <span data-aos="fade-up"></span>
+                            </div>
+                            <p>소렌토
+                        </div>
+                        <div>
+                            <div class="graph stack3">
+                                <span data-aos="fade-up"></span>
+                            </div>
+                            <p>스포티지
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+
+
+    <script>
+        // 스크롤 내리면 애니메이션 작동
+
+        $(window).scroll(function () {
+
+            if ($('body, html').scrollTop() > 200) {
+                // 숫자 증가 애니메이션 JS
+                $({ val: 0 }).animate({ val: 684 }, {
+                    duration: 1500,
+                    step: function () {
+                        var num = numberWithCommas(Math.floor(this.val));
+                        $(".data-count1").text(num);
+                    },
+                    complete: function () {
+                        var num = numberWithCommas(Math.floor(this.val));
+                        $(".data-count1").text(num);
+                    }
+                });
+
+                function numberWithCommas(x) {
+                    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+                }
+            };
+
+            if ($('body, html').scrollTop() > 200) {
+                $({ val: 0 }).animate({ val: 85258 }, {
+                    duration: 1500,
+                    step: function () {
+                        var num = numberWithCommas(Math.floor(this.val));
+                        $(".data-count2").text(num);
+                    },
+                    complete: function () {
+                        var num = numberWithCommas(Math.floor(this.val));
+                        $(".data-count2").text(num);
+                    }
+                });
+
+                function numberWithCommas(x) {
+                    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+                }
+            };
+        })
+    </script>
+
+
+    <article class="event">
+        <div>
+
+            <h2>이 달의 구매 혜택</h2>
+            <p><a>전체 혜택 보기 ></a></p>
+
+            <div class="display-flex-flow">
+                <div class="event-car-main">
+                    <section>
+                        <div>
+                            <h1>1</h1>
+                            <div>
+                                <h3>소렌토</h3>
+                                <p>2.2 디젤 | 5인승 프레스티지 2WD DCT</p>
+                            </div>
+                        </div>
+                        <img
+                            src="https://www.kia.com/content/dam/kwp/kr/ko/vehicles/represent/krmq135/sorento_mqjj52cd5_a_bn4.png?imwidth=660">
+                    </section>
+                    <section>
+                        <div>
+                            <h1>2</h1>
+                            <div>
+                                <h3>스포티지</h3>
+                                <p>1.6 터보 하이브리드 | 프레스티지 2WD A/T</p>
+                            </div>
+                        </div>
+                        <img
+                            src="https://www.kia.com/content/dam/kwp/kr/ko/vehicles/represent/krnq131/sportage_nqjj59b34_a_swp.png?imwidth=660">
+                    </section>
+                    <section>
+                        <div>
+                            <h1>3</h1>
+                            <div>
+                                <h3>K8</h3>
+                                <p>1.6 하이브리드 | 노블레스 A/T</p>
+                            </div>
+                        </div>
+                        <img
+                            src="https://www.kia.com/content/dam/kwp/kr/ko/vehicles/represent/krgl141/k8_gljs49b33_a_abp.png?imwidth=660">
+                    </section>
+                    <section>
+                        <div>
+                            <h1>4</h1>
+                            <div>
+                                <h3>K9</h3>
+                                <p>3.3 가솔린 터보 | 플래티넘 AWD</p>
+                            </div>
+                        </div>
+                        <img
+                            src="https://www.kia.com/content/dam/kwp/kr/ko/vehicles/represent/krjr139/k9_jrjs4bka6_a_d9b.png?imwidth=660">
+                    </section>
+                    <section>
+                        <div>
+                            <h1>5</h1>
+                            <div>
+                                <h3>모하비</h3>
+                                <p>3.0 디젤 | 6인승 플래티넘 그래비티 4WD A/T</p>
+                            </div>
+                        </div>
+                        <img
+                            src="https://www.kia.com/content/dam/kwp/kr/ko/vehicles/represent/krjs129/mohave_jsjj61tao_g_abp.png?imwidth=660">
+                    </section>
+                </div>
+                <div class="event-arrows">
+                    <button class="event-prev"><img
+                            src="https://cdn-icons-png.flaticon.com/128/271/271228.png"></button>
+                    <button class="event-next"><img
+                            src="https://cdn-icons-png.flaticon.com/128/271/271228.png"></button>
+                </div>
+
+                <div class="event-car">
+                    <section>
+                        <div>
+                            <h2>1</h2>
+                            <img
+                                src="https://www.kia.com/content/dam/kwp/kr/ko/vehicles/represent/krmq135/sorento_mqjj52cd5_a_bn4.png?imwidth=660">
+                            <p>소렌토<br>월 697,387 <span>원</span></p>
+                        </div>
+                    </section>
+                    <section>
+                        <div>
+                            <h2>2</h2>
+                            <img
+                                src="https://www.kia.com/content/dam/kwp/kr/ko/vehicles/represent/krnq131/sportage_nqjj59b34_a_swp.png?imwidth=660">
+                            <p>스포티지<br>월 636,197 <span>원</span></p>
+                        </div>
+                    </section>
+                    <section>
+                        <div>
+                            <h2>3</h2>
+                            <img
+                                src="https://www.kia.com/content/dam/kwp/kr/ko/vehicles/represent/krgl141/k8_gljs49b33_a_abp.png?imwidth=660">
+                            <p>K8<br>월 806,762 <span>원</span></p>
+                        </div>
+                    </section>
+                    <section>
+                        <div>
+                            <h2>4</h2>
+                            <img
+                                src="https://www.kia.com/content/dam/kwp/kr/ko/vehicles/represent/krjr139/k9_jrjs4bka6_a_d9b.png?imwidth=660">
+                            <p>K9<br>월 1,272,887 <span>원</span></p>
+                        </div>
+                    </section>
+                    <section>
+                        <div>
+                            <h2>5</h2>
+                            <img
+                                src="https://www.kia.com/content/dam/kwp/kr/ko/vehicles/represent/krjs129/mohave_jsjj61tao_g_abp.png?imwidth=660">
+                            <p>모하비<br>월 1,005,997 <span>원</span></p>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </article>
+
+
+    <script>
+        // slick 버튼 커스텀
+
+        $('.event-car-main').slick({
+            centerMode: false,
+            slidesToShow: 1,
+            infinite: true,
+            slidesToScroll: 1,
+            autoplay: true,
+            autoplaySpeed: 2500,
+            draggable: true,
+            arrow: false,
+            prevArrow: ".event-prev",
+            nextArrow: ".event-next",
+            asNavFor: ".event-car",
+        });
+
+        $('.event-car').slick({
+            centerMode: false,
+            slidesToShow: 3,
+            infinite: true,
+            slidesToScroll: 1,
+            autoplay: true,
+            autoplaySpeed: 2500,
+            draggable: true,
+            vertical: true,
+            arrow: false,
+            asNavFor: ".event-car-main",
+        });
+    </script>
+
+
+    <article class="best">
+        <div>
+
+            <h2>best kia</h2>
+
+            <div>
+                <ul class="display-flex-flow" id="listtap">
+                    <li class="tapsee">최근 출시</li>
+                    <li>연비 효율</li>
+                    <li>적재공간</li>
+                    <li>안정성</li>
+                </ul>
+                <div class="best1" id="best-list1">
+                    <div class="new-best-product1">
+                        <section>
+                            <div>
+                                <h3>The 2024 K8 <span>top 1</span></h3>
+                                <p>1.6 하이브리드 | 시그니처 A/T</p>
+                            </div>
+                            <div>
+                                <img
+                                    src="https://www.kia.com/content/dam/kwp/kr/ko/vehicles/represent/krgl141/k8_gljs49c33_b_abp.png?imwidth=640">
+                                <div></div>
+                            </div>
+                            <div>
+                                <table>
+                                    <tr>
+                                        <td>출시일</td>
+                                        <td>2023-10-04</td>
+                                    </tr>
+                                    <tr>
+                                        <td>배기량</td>
+                                        <td>1,598 cc</td>
+                                    </tr>
+                                    <tr>
+                                        <td>최고 출력</td>
+                                        <td>180 ps / 5,500 rpm</td>
+                                    </tr>
+                                    <tr>
+                                        <td>외장 컬러</td>
+                                        <td>오로라 블랙 펄</td>
+                                    </tr>
+                                    <tr>
+                                        <td>옵션</td>
+                                        <td>컴포트(하이브리드)<br>드라이브 와이즈(시그니처)<br>전자제어 서스펜션 등</td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <h3>51,210,000<span>원</span></h3>
+                            <button><a>자세히 보기</a></button>
+                            <button><a>견적 내기</a></button>
+                        </section>
+                        <section>
+                            <div>
+                                <h3>The Kia Ray EV <span>top 2</span></h3>
+                                <p>EV전기차 | 에어 A/T 2WD</p>
+                            </div>
+                            <div>
+                                <img
+                                    src="https://www.kia.com/content/dam/kwp/kr/ko/vehicles/represent/krtm138/ray-ev_tmjc5vo3e_a_eu3.png?imwidth=640">
+                                <div></div>
+                            </div>
+                            <div>
+                                <table>
+                                    <tr>
+                                        <td>출시일</td>
+                                        <td>2023-09-21</td>
+                                    </tr>
+                                    <tr>
+                                        <td>배터리 용량</td>
+                                        <td>35.2 kWh</td>
+                                    </tr>
+                                    <tr>
+                                        <td>최고 출력</td>
+                                        <td>64 kW / 87 ps</td>
+                                    </tr>
+                                    <tr>
+                                        <td>외장 컬러</td>
+                                        <td>스모크 블루</td>
+                                    </tr>
+                                    <tr>
+                                        <td>옵션</td>
+                                        <td>컴포트 II<br>드라이브 와이즈 II<br>스타일(에어)</td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <h3>30,800,000<span>원</span></h3>
+                            <button><a>자세히 보기</a></button>
+                            <button><a>견적 내기</a></button>
+                        </section>
+                        <section>
+                            <div>
+                                <h3>The New Sorento <span>top 3</span></h3>
+                                <p>1.6 하이브리드 | 7인승 시그니처 그래비티</p>
+                            </div>
+                            <div>
+                                <img
+                                    src="https://www.kia.com/content/dam/kwp/kr/ko/vehicles/represent/krmq135/sorento_mqjj79fa5_a_bn4.png?imwidth=640">
+                                <div></div>
+                            </div>
+                            <div>
+                                <table>
+                                    <tr>
+                                        <td>출시일</td>
+                                        <td>2023-08-18</td>
+                                    </tr>
+                                    <tr>
+                                        <td>배기량</td>
+                                        <td>1,598 cc</td>
+                                    </tr>
+                                    <tr>
+                                        <td>최고 출력</td>
+                                        <td>180 ps / 5,500 rpm</td>
+                                    </tr>
+                                    <tr>
+                                        <td>외장 컬러</td>
+                                        <td>볼캐닉 샌드 브라운</td>
+                                    </tr>
+                                    <tr>
+                                        <td>옵션</td>
+                                        <td>컴포트(그래비티)<br>HUD + 빌트인 캠 2</td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <h3>50,880,000<span>원</span></h3>
+                            <button><a>자세히 보기</a></button>
+                            <button><a>견적 내기</a></button>
+                        </section>
+                    </div>
+                    <div class="new-best-product2">
+                        <section>
+                            <div>
+                                <h3>The 2024 K3 <span>top 4</span></h3>
+                                <p>1.6 가솔린 | 시그니처 A/T</p>
+                            </div>
+                            <div>
+                                <img
+                                    src="https://www.kia.com/content/dam/kwp/kr/ko/vehicles/represent/krdb132/k3_dbjs4aj37_a_m4b.png?imwidth=640">
+                                <div></div>
+                            </div>
+                            <div>
+                                <table>
+                                    <tr>
+                                        <td>출시일</td>
+                                        <td>2023-07-04</td>
+                                    </tr>
+                                    <tr>
+                                        <td>배기량</td>
+                                        <td>1,598 cc</td>
+                                    </tr>
+                                    <tr>
+                                        <td>최고 출력</td>
+                                        <td>123 ps / 6,300 rpm</td>
+                                    </tr>
+                                    <tr>
+                                        <td>외장 컬러</td>
+                                        <td>미네랄 블루</td>
+                                    </tr>
+                                    <tr>
+                                        <td>옵션</td>
+                                        <td>블랙 핏<br>KRELL 프리미엄 사운드<br>선루프</td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <h3>26,460,000<span>원</span></h3>
+                            <button><a>자세히 보기</a></button>
+                            <button><a>견적 내기</a></button>
+                        </section>
+                        <section>
+                            <div>
+                                <h3>The 2024 K3 GT <span>top 5</span></h3>
+                                <p>1.6 가솔린 터보 | GT DCT</p>
+                            </div>
+                            <div>
+                                <img
+                                    src="https://www.kia.com/content/dam/kwp/kr/ko/vehicles/represent/krdb133/k3-gt_dbjs5bod7_a_cr5.png?imwidth=640">
+                                <div></div>
+                            </div>
+                            <div>
+                                <table>
+                                    <tr>
+                                        <td>출시일</td>
+                                        <td>2023-07-19</td>
+                                    </tr>
+                                    <tr>
+                                        <td>배기량</td>
+                                        <td>1,591 cc</td>
+                                    </tr>
+                                    <tr>
+                                        <td>최고 출력</td>
+                                        <td>204 ps / 6,000 rpm</td>
+                                    </tr>
+                                    <tr>
+                                        <td>외장 컬러</td>
+                                        <td>런웨이 레드</td>
+                                    </tr>
+                                    <tr>
+                                        <td>옵션</td>
+                                        <td>KRELL 프리미엄 사운드<br>GT 전용 가죽 시트<br>선루프 등</td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <h3>29,580,000<span>원</span></h3>
+                            <button><a>자세히 보기</a></button>
+                            <button><a>견적 내기</a></button>
+                        </section>
+                        <section>
+                            <div>
+                                <h3>The new K5 <span>top 6</span></h3>
+                                <p>2.0 하이브리드 | 시그니처 A/T</p>
+                            </div>
+                            <div>
+                                <img
+                                    src="https://www.kia.com/content/dam/kwp/kr/ko/vehicles/represent/krdl145/k5_dljs49f35_h_c7s.png?imwidth=640">
+                                <div></div>
+                            </div>
+                            <div>
+                                <table>
+                                    <tr>
+                                        <td>출시일</td>
+                                        <td>2023-11-02</td>
+                                    </tr>
+                                    <tr>
+                                        <td>배기량</td>
+                                        <td>1,999 cc</td>
+                                    </tr>
+                                    <tr>
+                                        <td>최고 출력</td>
+                                        <td>152 ps / 6,000 rpm</td>
+                                    </tr>
+                                    <tr>
+                                        <td>외장 컬러</td>
+                                        <td>울프 그레이</td>
+                                    </tr>
+                                    <tr>
+                                        <td>옵션</td>
+                                        <td>블랙 핏<br>컴포트(시그니처)<br>HUD + 빌트인캠2 등</td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <h3>43,790,000<span>원</span></h3>
+                            <button><a>자세히 보기</a></button>
+                            <button><a>견적 내기</a></button>
+                        </section>
+                    </div>
+                    <div class="number" id="number1">
+                        <span class="numberPic" id="numberPic1">1</span>
+                        <span>2</span>
+                    </div>
+                </div>
+                <div class="best2" id="best-list2">
+                    <div class="efficiency-best-product1">
+                        <section>
+                            <div>
+                                <h3>니로 <span>top 1</span></h3>
+                                <p>1.6 하이브리드 | 트렌디 2WD DCT</p>
+                            </div>
+                            <div>
+                                <img
+                                    src="https://www.kia.com/content/dam/kwp/kr/ko/vehicles/represent/krsg077/niro_sgjj59bd3_a_swp.png?imwidth=640">
+                                <div></div>
+                            </div>
+                            <div>
+                                <table>
+                                    <tr>
+                                        <td>복합 연비</td>
+                                        <td>20.8 km/ℓ</td>
+                                    </tr>
+                                    <tr>
+                                        <td>도심 연비</td>
+                                        <td>21.9 km/ℓ</td>
+                                    </tr>
+                                    <tr>
+                                        <td>고속도로 연비</td>
+                                        <td>19.6 km/ℓ</td>
+                                    </tr>
+                                    <tr>
+                                        <td>배기량</td>
+                                        <td>1,580 cc</td>
+                                    </tr>
+                                    <tr>
+                                        <td>옵션</td>
+                                        <td>컨비니언스<br>네비게이션</td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <h3>30,020,000<span>원</span></h3>
+                            <button><a>자세히 보기</a></button>
+                            <button><a>견적 내기</a></button>
+                        </section>
+                        <section>
+                            <div>
+                                <h3>K5 <span>top 2</span></h3>
+                                <p>2.0 하이브리드 | 트렌디 A/T</p>
+                            </div>
+                            <div>
+                                <img
+                                    src="https://www.kia.com/content/dam/kwp/kr/ko/vehicles/represent/krdl014/k5_dljs49c34_a_swp.png?imwidth=640">
+                                <div></div>
+                            </div>
+                            <div>
+                                <table>
+                                    <tr>
+                                        <td>복합 연비</td>
+                                        <td>20.1 km/ℓ</td>
+                                    </tr>
+                                    <tr>
+                                        <td>도심 연비</td>
+                                        <td>19.9 km/ℓ</td>
+                                    </tr>
+                                    <tr>
+                                        <td>고속도로 연비</td>
+                                        <td>20.6 km/ℓ</td>
+                                    </tr>
+                                    <tr>
+                                        <td>배기량</td>
+                                        <td>1,990 cc</td>
+                                    </tr>
+                                    <tr>
+                                        <td>옵션</td>
+                                        <td>-</td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <h3>29,900,000<span>원</span></h3>
+                            <button><a>자세히 보기</a></button>
+                            <button><a>견적 내기</a></button>
+                        </section>
+                        <section>
+                            <div>
+                                <h3>K8 <span>top 3</span></h3>
+                                <p>1.6 하이브리드 | 시그니처 A/T</p>
+                            </div>
+                            <div>
+                                <img
+                                    src="https://www.kia.com/content/dam/kwp/kr/ko/vehicles/represent/krgl141/k8_gljs49c33_b_abp.png?imwidth=640">
+                                <div></div>
+                            </div>
+                            <div>
+                                <table>
+                                    <tr>
+                                        <td>복합 연비</td>
+                                        <td>17.1 km/ℓ</td>
+                                    </tr>
+                                    <tr>
+                                        <td>도심 연비</td>
+                                        <td>17.9 km/ℓ</td>
+                                    </tr>
+                                    <tr>
+                                        <td>고속도로 연비</td>
+                                        <td>16.6 km/ℓ</td>
+                                    </tr>
+                                    <tr>
+                                        <td>배기량</td>
+                                        <td>1,598 cc</td>
+                                    </tr>
+                                    <tr>
+                                        <td>옵션</td>
+                                        <td>드라이브 와이즈(시그니처)<br>전자에어 서스펜션<br>HUD + 스마트 커넥트 등</td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <h3>50,270,000<span>원</span></h3>
+                            <button><a>자세히 보기</a></button>
+                            <button><a>견적 내기</a></button>
+                        </section>
+                    </div>
+                    <div class="efficiency-best-product2">
+                        <section>
+                            <div>
+                                <h3>스포티지 <span>top 4</span></h3>
+                                <p>1.6 터보 하이브리드 | 30th Edition 4WD A/T</p>
+                            </div>
+                            <div>
+                                <img
+                                    src="https://www.kia.com/content/dam/kwp/kr/ko/vehicles/represent/krnq131/sportage_nqjj59ga4_f_mgg.png?imwidth=640">
+                                <div></div>
+                            </div>
+                            <div>
+                                <table>
+                                    <tr>
+                                        <td>복합 연비</td>
+                                        <td>15.1 km/ℓ</td>
+                                    </tr>
+                                    <tr>
+                                        <td>도심 연비</td>
+                                        <td>15.4 km/ℓ</td>
+                                    </tr>
+                                    <tr>
+                                        <td>고속도로 연비</td>
+                                        <td>14.9 km/ℓ</td>
+                                    </tr>
+                                    <tr>
+                                        <td>배기량</td>
+                                        <td>1,589 cc</td>
+                                    </tr>
+                                    <tr>
+                                        <td>옵션</td>
+                                        <td>빌트인 캠(하이브리드)<br>모니터링 팩(하이브리드 시그니처)</td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <h3>43,900,000<span>원</span></h3>
+                            <button><a>자세히 보기</a></button>
+                            <button><a>견적 내기</a></button>
+                        </section>
+                        <section>
+                            <div>
+                                <h3>모닝 <span>top 5</span></h3>
+                                <p>1.0 가솔린 | 트렌디 A/T</p>
+                            </div>
+                            <div>
+                                <img
+                                    src="https://www.kia.com/content/dam/kwp/kr/ko/vehicles/represent/krja130/morning_jajh5ag38_a_ud.png?imwidth=640">
+                                <div></div>
+                            </div>
+                            <div>
+                                <table>
+                                    <tr>
+                                        <td>복합 연비</td>
+                                        <td>15.1 km/ℓ</td>
+                                    </tr>
+                                    <tr>
+                                        <td>도심 연비</td>
+                                        <td>13.8 km/ℓ</td>
+                                    </tr>
+                                    <tr>
+                                        <td>고속도로 연비</td>
+                                        <td>16.9 km/ℓ</td>
+                                    </tr>
+                                    <tr>
+                                        <td>배기량</td>
+                                        <td>998 cc</td>
+                                    </tr>
+                                    <tr>
+                                        <td>옵션</td>
+                                        <td>드라이브 와이즈 I<br>드라이브 와이즈 II(트렌디)<br>버튼시동 PACK 등</td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <h3>15,600,000<span>원</span></h3>
+                            <button><a>자세히 보기</a></button>
+                            <button><a>견적 내기</a></button>
+                        </section>
+                        <section>
+                            <div>
+                                <h3>the new carnival <span>top 6</span></h3>
+                                <p>3.5 가솔린 프레스티지 9인승 기준</p>
+                            </div>
+                            <div>
+                                <img
+                                    src="https://www.kia.com/content/dam/kwp/kr/ko/vehicles/represent/krja130/morning_jajh5ag38_a_ud.png?imwidth=640">
+                                <div></div>
+                            </div>
+                            <div>
+                                <table>
+                                    <tr>
+                                        <td>복합 연비</td>
+                                        <td>9.0 km/ℓ</td>
+                                    </tr>
+                                    <tr>
+                                        <td>도심 연비</td>
+                                        <td>13.8 km/ℓ</td>
+                                    </tr>
+                                    <tr>
+                                        <td>고속도로 연비</td>
+                                        <td>16.9 km/ℓ</td>
+                                    </tr>
+                                    <tr>
+                                        <td>배기량</td>
+                                        <td>3,470 cc</td>
+                                    </tr>
+                                    <tr>
+                                        <td>옵션</td>
+                                        <td>프로젝션 LED 헤드램프<br>LED 리어 콤비네이션램프</td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <h3>15,600,000<span>원</span></h3>
+                            <button><a>자세히 보기</a></button>
+                            <button><a>견적 내기</a></button>
+                        </section>
+                    </div>
+                    <div class="number" id="number2">
+                        <span class="numberPic" id="numberPic2">1</span>
+                        <span>2</span>
+                    </div>
+                </div>
+                <div class="best3" id="best-list3">
+                    <div class="space-best-product1">
+                        <section>
+                            <div>
+                                <h3>카니발 <span>top 1</span></h3>
+                                <p>3.5 가솔린 | 7인승 시그니처 A/T</p>
+                            </div>
+                            <div>
+                                <img
+                                    src="https://www.kia.com/content/dam/kwp/kr/ko/vehicles/represent/krkp027/carnival_kpjg7ad34_a_p2m.png?imwidth=640">
+                                <div></div>
+                            </div>
+                            <div>
+                                <table>
+                                    <tr>
+                                        <td>트렁크 용량</td>
+                                        <td>1,672 ℓ</td>
+                                    </tr>
+                                    <tr>
+                                        <td>복합 연비</td>
+                                        <td>8.9 km/ℓ</td>
+                                    </tr>
+                                    <tr>
+                                        <td>배기량</td>
+                                        <td>3,470 cc</td>
+                                    </tr>
+                                    <tr>
+                                        <td>옵션</td>
+                                        <td>듀얼 선루프<br>드라이브 와이즈<br>KRELL 프리미엄 사운드 등</td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <h3>47,780,000<span>원</span></h3>
+                            <button><a>자세히 보기</a></button>
+                            <button><a>견적 내기</a></button>
+                        </section>
+                        <section>
+                            <div>
+                                <h3>소렌토 <span>top 2</span></h3>
+                                <p>1.6 하이브리드 | 5인승 시그니처 2WD A/T</p>
+                            </div>
+                            <div>
+                                <img
+                                    src="https://www.kia.com/content/dam/kwp/kr/ko/vehicles/represent/krmq135/sorento_mqjj59f35_a_agt.png?imwidth=640">
+                                <div></div>
+                            </div>
+                            <div>
+                                <table>
+                                    <tr>
+                                        <td>트렁크 용량</td>
+                                        <td>706 ℓ</td>
+                                    </tr>
+                                    <tr>
+                                        <td>복합 연비</td>
+                                        <td>15.7 km/ℓ</td>
+                                    </tr>
+                                    <tr>
+                                        <td>배기량</td>
+                                        <td>1,598 cc</td>
+                                    </tr>
+                                    <tr>
+                                        <td>옵션</td>
+                                        <td>컴포트(그래비티)<br>드라이브 와이즈<br>HUD + 빌트인 캠 2 등</td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <h3>51,470,000<span>원</span></h3>
+                            <button><a>자세히 보기</a></button>
+                            <button><a>견적 내기</a></button>
+                        </section>
+                        <section>
+                            <div>
+                                <h3>스포티지 <span>top 3</span></h3>
+                                <p>1.6 터보 하이브리드 | 시그니처 2WD A/T</p>
+                            </div>
+                            <div>
+                                <img
+                                    src="https://www.kia.com/content/dam/kwp/kr/ko/vehicles/represent/krnq131/sportage_nqjj59e34_a_swp.png?imwidth=640">
+                                <div></div>
+                            </div>
+                            <div>
+                                <table>
+                                    <tr>
+                                        <td>트렁크 용량</td>
+                                        <td>637 ℓ</td>
+                                    </tr>
+                                    <tr>
+                                        <td>복합 연비</td>
+                                        <td>16.7 km/ℓ</td>
+                                    </tr>
+                                    <tr>
+                                        <td>배기량</td>
+                                        <td>1,598 cc</td>
+                                    </tr>
+                                    <tr>
+                                        <td>옵션</td>
+                                        <td>모니터링 팩(하이브리드 시그니처)<br>스타일(하이브리드 시그니처)</td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <h3>40,160,000<span>원</span></h3>
+                            <button><a>자세히 보기</a></button>
+                            <button><a>견적 내기</a></button>
+                        </section>
+                    </div>
+                    <div class="space-best-product2">
+                        <section>
+                            <div>
+                                <h3>모하비 <span>top 4</span></h3>
+                                <p>3.0 디젤 | 5인승 플래티넘 그래비티 4WD A/T</p>
+                            </div>
+                            <div>
+                                <img
+                                    src="https://www.kia.com/content/dam/kwp/kr/ko/vehicles/represent/krjs129/mohave_jsjj51tao_h_abp.png?imwidth=640">
+                                <div></div>
+                            </div>
+                            <div>
+                                <table>
+                                    <tr>
+                                        <td>트렁크 용량</td>
+                                        <td>580 ℓ</td>
+                                    </tr>
+                                    <tr>
+                                        <td>복합 연비</td>
+                                        <td>9.3 km/ℓ</td>
+                                    </tr>
+                                    <tr>
+                                        <td>배기량</td>
+                                        <td>2,970 cc</td>
+                                    </tr>
+                                    <tr>
+                                        <td>옵션</td>
+                                        <td>-</td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <h3>50,020,000<span>원</span></h3>
+                            <button><a>자세히 보기</a></button>
+                            <button><a>견적 내기</a></button>
+                        </section>
+                        <section>
+                            <div>
+                                <h3>K5 <span>top 5</span></h3>
+                                <p>2.0 하이브리드 | 프레스티지 A/T</p>
+                            </div>
+                            <div>
+                                <img
+                                    src="https://www.kia.com/content/dam/kwp/kr/ko/vehicles/represent/krdl014/k5_dljs49d34_a_swp.png?imwidth=640">
+                                <div></div>
+                            </div>
+                            <div>
+                                <table>
+                                    <tr>
+                                        <td>트렁크 용량</td>
+                                        <td>510 ℓ</td>
+                                    </tr>
+                                    <tr>
+                                        <td>복합 연비</td>
+                                        <td>19.1 km/ℓ</td>
+                                    </tr>
+                                    <tr>
+                                        <td>배기량</td>
+                                        <td>1,999 cc</td>
+                                    </tr>
+                                    <tr>
+                                        <td>옵션</td>
+                                        <td>드라이브 와이즈(프레스티지)<br>10.25인치 내비게이션</td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <h3>33,690,000<span>원</span></h3>
+                            <button><a>자세히 보기</a></button>
+                            <button><a>견적 내기</a></button>
+                        </section>
+                        <section>
+                            <div>
+                                <h3>K9 <span>top 6</span></h3>
+                                <p>3.3 가솔린 터보</p>
+                            </div>
+                            <div>
+                                <img
+                                    src="https://www.kia.com/content/dam/kwp/kr/ko/vehicles/represent/krjr139/k9_jrjs4bla6_r_d9b.png">
+                                <div></div>
+                            </div>
+                            <div>
+                                <table>
+                                    <tr>
+                                        <td>트렁크 용량</td>
+                                        <td>455 ℓ</td>
+                                    </tr>
+                                    <tr>
+                                        <td>복합 연비</td>
+                                        <td>9.1 km/ℓ</td>
+                                    </tr>
+                                    <tr>
+                                        <td>배기량</td>
+                                        <td>3,778 cc</td>
+                                    </tr>
+                                    <tr>
+                                        <td>옵션</td>
+                                        <td>프리미엄 팩<br>선루프<br>VIP컬렉션</td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <h3>78,520,000<span>원</span></h3>
+                            <button><a>자세히 보기</a></button>
+                            <button><a>견적 내기</a></button>
+                        </section>
+                    </div>
+                    <div class="number" id="number3">
+                        <span class="numberPic" id="numberPic3">1</span>
+                        <span>2</span>
+                    </div>
+                </div>
+                <div class="best4" id="best-list4">
+                    <div class="safe-best-product1">
+                        <section>
+                            <div>
+                                <h3>스포티지 <span>top 1</span></h3>
+                                <p>1.6 터보 하이브리드 | 시그니처 그래피티</p>
+                            </div>
+                            <div>
+                                <img
+                                    src="https://www.kia.com/content/dam/kwp/kr/ko/vehicles/represent/krnq131/sportage_nqjj59fa4_b_swp.png?imwidth=640">
+                                <div></div>
+                            </div>
+                            <div>
+                                <table>
+                                    <tr>
+                                        <td>종합 안전 등급</td>
+                                        <td>1등급</td>
+                                    </tr>
+                                    <tr>
+                                        <td>충돌 안전</td>
+                                        <td>ⓘ</td>
+                                    </tr>
+                                    <tr>
+                                        <td>종합 안전 점수</td>
+                                        <td>94.10점</td>
+                                    </tr>
+                                    <tr>
+                                        <td>배기량</td>
+                                        <td>1,598 cc</td>
+                                    </tr>
+                                    <tr>
+                                        <td>옵션</td>
+                                        <td>빌트인 캠(하이브리드)<br>모니터링 팩(하이브리드 시그니처)<br>프리미엄(시그니처) 등</td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <h3>44,870,000<span>원</span></h3>
+                            <button><a>자세히 보기</a></button>
+                            <button><a>견적 내기</a></button>
+                        </section>
+                        <section>
+                            <div>
+                                <h3>K8 <span>top 2</span></h3>
+                                <p>1.6 하이브리드 | 시그니처 A/T</p>
+                            </div>
+                            <div>
+                                <img
+                                    src="https://www.kia.com/content/dam/kwp/kr/ko/vehicles/represent/krgl141/k8_gljs49c33_b_agt.png?imwidth=640">
+                                <div></div>
+                            </div>
+                            <div>
+                                <table>
+                                    <tr>
+                                        <td>종합 안전 등급</td>
+                                        <td>1등급</td>
+                                    </tr>
+                                    <tr>
+                                        <td>충돌 안전</td>
+                                        <td>ⓘ</td>
+                                    </tr>
+                                    <tr>
+                                        <td>종합 안전 점수</td>
+                                        <td>93.10점</td>
+                                    </tr>
+                                    <tr>
+                                        <td>배기량</td>
+                                        <td>1,598 cc</td>
+                                    </tr>
+                                    <tr>
+                                        <td>옵션</td>
+                                        <td>컴포트(하이브리드)<br>드라이브 와이즈(시그니처)<br>전자제어 서스펜션 등</td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <h3>51,210,000<span>원</span></h3>
+                            <button><a>자세히 보기</a></button>
+                            <button><a>견적 내기</a></button>
+                        </section>
+                        <section>
+                            <div>
+                                <h3>카니발 <span>top 3</span></h3>
+                                <p>2.2 디젤 | 9인승 노블레스 내비적용 A/T</p>
+                            </div>
+                            <div>
+                                <img
+                                    src="https://www.kia.com/content/dam/kwp/kr/ko/vehicles/represent/krkp027/carnival_kpjg91c34_c_abp.png?imwidth=640">
+                                <div></div>
+                            </div>
+                            <div>
+                                <table>
+                                    <tr>
+                                        <td>종합 안전 등급</td>
+                                        <td>1등급</td>
+                                    </tr>
+                                    <tr>
+                                        <td>충돌 안전</td>
+                                        <td>ⓘ</td>
+                                    </tr>
+                                    <tr>
+                                        <td>종합 안전 점수</td>
+                                        <td>92.50점</td>
+                                    </tr>
+                                    <tr>
+                                        <td>배기량</td>
+                                        <td>2,151 cc</td>
+                                    </tr>
+                                    <tr>
+                                        <td>옵션</td>
+                                        <td>드라이브 와이즈<br>12.3인치 내비게이션(노블레스)</td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <h3>39,950,000<span>원</span></h3>
+                            <button><a>자세히 보기</a></button>
+                            <button><a>견적 내기</a></button>
+                        </section>
+                    </div>
+                    <div class="safe-best-product2">
+                        <section>
+                            <div>
+                                <h3>셀토스 <span>top 4</span></h3>
+                                <p>1.6 가솔린 | 트렌디 2WD A/T</p>
+                            </div>
+                            <div>
+                                <img
+                                    src="https://www.kia.com/content/dam/kwp/kr/ko/vehicles/represent/krsu105/seltos_sujj5aad7_a_swp.png?imwidth=640">
+                                <div></div>
+                            </div>
+                            <div>
+                                <table>
+                                    <tr>
+                                        <td>종합 안전 등급</td>
+                                        <td>1등급</td>
+                                    </tr>
+                                    <tr>
+                                        <td>충돌 안전</td>
+                                        <td>ⓘ</td>
+                                    </tr>
+                                    <tr>
+                                        <td>종합 안전 점수</td>
+                                        <td>92.02점</td>
+                                    </tr>
+                                    <tr>
+                                        <td>배기량</td>
+                                        <td>1,598 cc</td>
+                                    </tr>
+                                    <tr>
+                                        <td>옵션</td>
+                                        <td>컨비니언스<br>드라이브 와이즈<br>10.25인치 내비게이션</td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <h3>24,610,000<span>원</span></h3>
+                            <button><a>자세히 보기</a></button>
+                            <button><a>견적 내기</a></button>
+                        </section>
+                        <section>
+                            <div>
+                                <h3>EV6 <span>top 5</span></h3>
+                                <p>EV전기차 | 롱레인지 GT-line 4WD A/T</p>
+                            </div>
+                            <div>
+                                <img
+                                    src="https://www.kia.com/content/dam/kwp/kr/ko/vehicles/represent/krcv136/ev6_cvjj5vfa3_b_klm.png?imwidth=640">
+                                <div></div>
+                            </div>
+                            <div>
+                                <table>
+                                    <tr>
+                                        <td>종합 안전 등급</td>
+                                        <td>1등급</td>
+                                    </tr>
+                                    <tr>
+                                        <td>충돌 안전</td>
+                                        <td>ⓘ</td>
+                                    </tr>
+                                    <tr>
+                                        <td>종합 안전 점수</td>
+                                        <td>91.90점</td>
+                                    </tr>
+                                    <tr>
+                                        <td>배터리 용량</td>
+                                        <td>77.4 kWh</td>
+                                    </tr>
+                                    <tr>
+                                        <td>옵션</td>
+                                        <td>스웨이드컬렉션<br>빌트인 캠<br>하이테크(GT-line) 등</td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <h3>69,530,000<span>원</span></h3>
+                            <button><a>자세히 보기</a></button>
+                            <button><a>견적 내기</a></button>
+                        </section>
+                        <section>
+                            <div>
+                                <h3>EV6 GT <span>top 6</span></h3>
+                                <p>EV전기차 | GT 4WD A/T</p>
+                            </div>
+                            <div>
+                                <img
+                                    src="https://www.kia.com/content/dam/kwp/kr/ko/vehicles/represent/krcv140/ev6-gt_s_klm.png">
+                                <div></div>
+                            </div>
+                            <div>
+                                <table>
+                                    <tr>
+                                        <td>종합 안전 등급</td>
+                                        <td>1등급</td>
+                                    </tr>
+                                    <tr>
+                                        <td>충돌 안전</td>
+                                        <td>ⓘ</td>
+                                    </tr>
+                                    <tr>
+                                        <td>종합 안전 점수</td>
+                                        <td>91.90점</td>
+                                    </tr>
+                                    <tr>
+                                        <td>배터리 용량</td>
+                                        <td>77.4 kWh</td>
+                                    </tr>
+                                    <tr>
+                                        <td>옵션</td>
+                                        <td>빌트인 캠<br>와이드 선루프</td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <h3>77,470,000<span>원</span></h3>
+                            <button><a>자세히 보기</a></button>
+                            <button><a>견적 내기</a></button>
+                        </section>
+                    </div>
+                    <div class="number" id="number4">
+                        <span class="numberPic" id="numberPic4">1</span>
+                        <span>2</span>
+                    </div>
+                </div>
+                <p>※ 차량의 출시일 기준이며 차량별 사양 구성은 최다 판매 기준입니다.</p>
+            </div>
+        </div>
+    </article>
+
+
+    <script>
+
+        // 탭메뉴에 따라 제품 보이기
+        const bestList1 = document.querySelector("#best-list1");
+        const newBestProduct1 = document.querySelector(".new-best-product1");
+        const newBestProduct2 = document.querySelector(".new-best-product2");
+
+        const bestList2 = document.querySelector("#best-list2");
+        const efficiencyBestProduct1 = document.querySelector(".efficiency-best-product1");
+        const efficiencyBestProduct2 = document.querySelector(".efficiency-best-product2");
+
+        const bestList3 = document.querySelector("#best-list3");
+        const spaceBestProduct1 = document.querySelector(".space-best-product1");
+        const spaceBestProduct2 = document.querySelector(".space-best-product2");
+
+        const bestList4 = document.querySelector("#best-list4");
+        const safeBestProduct1 = document.querySelector(".safe-best-product1");
+        const safeBestProduct2 = document.querySelector(".safe-best-product2");
+
+        const tapList = document.querySelectorAll("#listtap > li");
+        for (let i = 0; i < tapList.length; i++) {
+            tapList[i].addEventListener("click", function () {
+
+                clearTap();
+
+                this.classList.add("tapsee");
+
+                if (i == 0) {
+                    bestList1.style.display = "block";
+                    newBestProduct1.style.display = "flex";
+                    newBestProduct2.style.display = "none";
+                    bestList2.style.display = "none";
+                    bestList3.style.display = "none";
+                    bestList4.style.display = "none";
+                }
+                else if (i == 1) {
+                    bestList1.style.display = "none";
+                    bestList2.style.display = "block";
+                    efficiencyBestProduct1.style.display = "flex";
+                    efficiencyBestProduct2.style.display = "none";
+                    bestList3.style.display = "none";
+                    bestList4.style.display = "none";
+                }
+                else if (i == 2) {
+                    bestList1.style.display = "none";
+                    bestList2.style.display = "none";
+                    bestList3.style.display = "block";
+                    spaceBestProduct1.style.display = "flex";
+                    spaceBestProduct2.style.display = "none";
+                    bestList4.style.display = "none";
+                }
+                else if (i == 3) {
+                    bestList1.style.display = "none";
+                    bestList2.style.display = "none";
+                    bestList3.style.display = "none";
+                    bestList4.style.display = "block";
+                    safeBestProduct1.style.display = "flex";
+                    safeBestProduct2.style.display = "none";
+                }
+            });
+        }
+        function clearTap() {
+            for (let i = 0; i < tapList.length; i++) {
+                tapList[i].classList.remove("tapsee");
+            }
+        }
+
+        //제품 숫자 탭 클릭
+        //최근출시
+        const numberPics1 = document.querySelectorAll("#number1 > span");
+
+        for (let j = 0; j < numberPics1.length; j++) {
+            numberPics1[j].addEventListener("click", function () {
+                clearPage1();
+                this.classList.add("numberPic");
+                if (j == 0) {
+                    newBestProduct1.style.display = "flex";
+                    newBestProduct2.style.display = "none";
+                }
+                else if (j == 1) {
+                    newBestProduct1.style.display = "none";
+                    newBestProduct2.style.display = "flex";
+                }
+            });
+        }
+        function clearPage1() {
+            for (let j = 0; j < numberPics1.length; j++) {
+                numberPics1[j].classList.remove("numberPic");
+            }
+        };
+
+        //연비효율
+        const numberPics2 = document.querySelectorAll("#number2 > span");
+
+        for (let j = 0; j < numberPics2.length; j++) {
+            numberPics2[j].addEventListener("click", function () {
+                clearPage2();
+                this.classList.add("numberPic");
+                if (j == 0) {
+                    efficiencyBestProduct1.style.display = "flex";
+                    efficiencyBestProduct2.style.display = "none";
+                }
+                else if (j == 1) {
+                    efficiencyBestProduct1.style.display = "none";
+                    efficiencyBestProduct2.style.display = "flex";
+                }
+            });
+        }
+        function clearPage2() {
+            for (let j = 0; j < numberPics2.length; j++) {
+                numberPics2[j].classList.remove("numberPic");
+            }
+        };
+
+        //적재공간
+        const numberPics3 = document.querySelectorAll("#number3 > span");
+
+        for (let j = 0; j < numberPics3.length; j++) {
+            numberPics3[j].addEventListener("click", function () {
+                clearPage3();
+                this.classList.add("numberPic");
+                if (j == 0) {
+                    spaceBestProduct1.style.display = "flex";
+                    spaceBestProduct2.style.display = "none";
+                }
+                else if (j == 1) {
+                    spaceBestProduct1.style.display = "none";
+                    spaceBestProduct2.style.display = "flex";
+                }
+            });
+        }
+        function clearPage3() {
+            for (let j = 0; j < numberPics3.length; j++) {
+                numberPics3[j].classList.remove("numberPic");
+            }
+        };
+
+        //안정성
+        const numberPics4 = document.querySelectorAll("#number4 > span");
+
+        for (let j = 0; j < numberPics4.length; j++) {
+            numberPics4[j].addEventListener("click", function () {
+                clearPage4();
+                this.classList.add("numberPic");
+                if (j == 0) {
+                    safeBestProduct1.style.display = "flex";
+                    safeBestProduct2.style.display = "none";
+                }
+                else if (j == 1) {
+                    safeBestProduct1.style.display = "none";
+                    safeBestProduct2.style.display = "flex";
+                }
+            });
+        }
+        function clearPage4() {
+            for (let j = 0; j < numberPics4.length; j++) {
+                numberPics4[j].classList.remove("numberPic");
+            }
+        };
+    </script>
+
+
+    <article class="news">
+        <div>
+            <div>
+                <h2>news</h2>
+                <div class="display-flex-flow">
+                    <section class="news-list">
+                        <p>기아 소식</p>
+                        <h4>기아, '2023 기아 EV 데이' 개최</h4>
+                        <p>기아가 12일(목) 경기도 여주시에 위치한 마임비전빌리지에서 '2023 기아 EV 데이'를 개최하고 EV 시대로의 전환을 앞당기기 위한 청사진을 공개했다.</p>
+                        <button><img src="https://cdn-icons-png.flaticon.com/512/271/271228.png"></button>
+                    </section>
+                    <section class="news-list">
+                        <p>기아 뉴스</p>
+                        <h4>기아, '서울 ADEX 2023' 참가</h4>
+                        <p>기아가 대한민국 최대 항공우주·방위산업 전시회인 '서울 ADEX 2023'에 참가한다.서울 ADEX(Aerospace & Defense Exhibition)는
+                            1996년 첫 전시 이후 격년으로 개최돼 올해 14회째를 맞이했다. 올해는 오늘부터 22일(일)까지 경기도 성남시 서울공항에서 개최되며 34개국 550여 개 업체가
+                            참여를 확정해 역대 최대 규모로 진행될 예정이다.</p>
+                        <button><img src="https://cdn-icons-png.flaticon.com/128/271/271228.png"></button>
+                    </section>
+                    <section class="news-list">
+                        <p>기아 뉴스</p>
+                        <h4>EV 가속화 등 중장기 사업전략 공유</h4>
+                        <p>기아가 2018년 이후 5년 만에 전 세계 대리점 대회를 열었다. 신종 코로나바이러스 감염증(코로나19) 사태 이후 전 세계에서 기아의 영업 일선을 책임지는 인사들이
+                            처음으로 한 자리에 모였다. 13일(금) 기아는 지난 10일부터 3박 4일 일정으로 ‘전 세계 대리점 대회’를 개최했다고 밝혔다.</p>
+                        <button><img src="https://cdn-icons-png.flaticon.com/128/271/271228.png"></button>
+                    </section>
+                    <section class="news-list">
+                        <p>기아 공지</p>
+                        <h4>홈페이지 이용약관 변경 안내</h4>
+                        <p>안녕하세요. 기아 홈페이지 입니다.
+                            항상 기아 홈페이지를 이용해주시는 회원 여러분들께 감사드립니다.
+                            기아 홈페이지 이용약관 변경 관련 안내드립니다.</p>
+                        <button><img src="https://cdn-icons-png.flaticon.com/128/271/271228.png"></button>
+                    </section>
+                </div>
+                <button>더보기</button>
+            </div>
+        </div>
+    </article>
+
+
+    <script>
+        const newsSections = document.querySelectorAll(".news-list");
+
+        for (let a = 0; a < newsSections.length; a++) {
+            newsSections[a].addEventListener("mouseover", function () {
+                clearNews();
+                this.style.backgroundColor = "white";
+                this.style.color = "black";
+                this.style.transition = "0.3s";
+                this.lastElementChild.style.filter = "invert(0)";
+            });
+
+            function clearNews() {
+                for (let a = 0; a < newsSections.length; a++) {
+                    newsSections[a].addEventListener("mouseout", function () {
+                        newsSections[a].style.background = "none";
+                        newsSections[a].style.color = "white";
+                        newsSections[a].lastElementChild.style.filter = "invert(1)";
+                    });
+                };
+            };
+        }
+    </script>
+
+
+    <article class="map">
+        <div>
+            <iframe class="pc"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3166.8553143168688!2d127.03962977544943!3d37.46413792999381!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca6d48403559d%3A0x1b6609c28f10b918!2z6riw7JWEIOuzuOyCrA!5e0!3m2!1sko!2skr!4v1699286029360!5m2!1sko!2skr"
+                width="100%" height="500" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <div>
+                <h2>현재 고객님과 가까운<br><span>kia 매장 안내</span>를 해드립니다.</h2>
+                <div>
+                    <input type="text" placeholder="지역명 검색" style="color: white;">
+                    <img class="local-search-btn" onclick="openLocalSearch()"
+                        src="https://www.winix.com/build/assets/header_search_w-ba023ddc.png">
+                </div>
+                <div class="local-search-pop">
+                    <div class="display-flex-flow">
+                        <p>자주 찾으시는 매장</p>
+                        <div>
+                            <button>강남지점</button>
+                            <button>강동지점</button>
+                            <button>가락지점</button>
+                        </div>
+                    </div>
+                    <div>
+                        <button class="close-local-search">닫기</button>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <h3>이런 서비스를 찾으시나요?</h3>
+                <div class="display-flex-flow">
+                    <section onclick="openCalculator()">
+                        <div>
+                            <img src="https://www.kia.com/content/dam/kwp/kr/ko/common/icon/subnav_util_icon01.svg">
+                        </div>
+                        <p>견적내기</p>
+                    </section>
+                    <section onclick="openModel()">
+                        <div>
+                            <img src="https://cdn-icons-png.flaticon.com/128/8621/8621758.png">
+                        </div>
+                        <p>모델비교</p>
+                    </section>
+                    <section>
+                        <div>
+                            <img src="https://cdn-icons-png.flaticon.com/128/984/984199.png">
+                        </div>
+                        <p>자주 묻는 질문</p>
+                    </section>
+                    <section class="present-btn">
+                        <div>
+                            <img src="https://www.kia.com/content/dam/kwp/kr/ko/common/icon/subnav_util_icon04.svg
+                            ">
+                        </div>
+                        <p>이 달의 구매 혜택</p>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </article>
+
+
+    <script>
+        const localSearchPoPup = document.querySelector(".local-search-pop");
+        const localSearchButton = document.querySelector(".local-search-btn");
+
+        function openLocalSearch() {
+            localSearchPoPup.style.opacity = "1";
+            localSearchPoPup.style.bottom = "-250px";
+            localSearchPoPup.style.visibility = "unset";
+
+            document.querySelector(".close-local-search").addEventListener("click", function () {
+                localSearchPoPup.style.opacity = "0";
+                localSearchPoPup.style.bottom = "-230px";
+                localSearchPoPup.style.visibility = "hidden";
+            })
+        };
+
+        $(document).ready(function () {
+
+            $('.present-btn').click(function () {
+
+                const offset = $('.event').offset();
+                //선택한 태그의 위치를 반환
+                //animate()메서드를 이용해서 선택한 태그의 스크롤 위치를 지정해서 0.4초 동안 부드럽게 해당 위치로 이동함 
+
+                $('html').animate({ scrollTop: offset.top }, 1000);
+
+            });
+
+        });
+    </script>
+
+
+    <article class="cs">
+        <div>
+            <div>
+                <h2><span>kia</span> 빠른 상담 문의</h2>
+            </div>
+            <div class="display-flex-flow">
+                <div>
+                    <div>
+                        <h3 class="pc">이름</h3>
+                        <input type="text" placeholder="이름을 입력해주세요." style="color:#ccc;">
+                    </div>
+                    <div>
+                        <h3 class="pc">연락처</h3>
+                        <input type="text" placeholder="연락처를 입력해주세요." style="color:#ccc;">
+                    </div>
+                    <div class="mo">
+                        <textarea placeholder="상담내용을 입력해주세요." cols="30" rows="5" style="color: #ccc;"></textarea>
+                    </div>
+                    <div class="display-flex-flow">
+                        <div class="display-flex-flow">
+                            <input type="checkbox" id="check1">
+                            <label for="check1"></label>
+                            <p>개인정보수집 및 이용 동의</p>
+                        </div>
+                        <button><a>자세히 보기</a></button>
+                    </div>
+                </div>
+                <div class="pc">
+                    <h3 class="pc">상담내용</h3>
+                    <textarea placeholder="상담내용을 입력해주세요." cols="30" rows="10" style="color:#ccc;"></textarea>
+                    <button><a>신청하기</a></button>
+                </div>
+                <button class="mo"><a>신청하기</a></button>
+            </div>
+        </div>
+    </article>
+
+
+    <script>
+        AOS.init({
+            duration: 2500,
+        })
+    </script>
+
+
+    <footer>
+        <div>
+            <div>
+                <img
+                    src="https://www.kia.com/etc.clientlibs/kwp-global/clientlibs/clientlib-site/resources/images/common/logo_w.svg">
+            </div>
+            <ul class="display-flex-flow">
+                <li>판매 네트워크
+                    <ul class="pc">
+                        <li>지점/대리점</li>
+                        <li>영업담당</li>
+                        <li>전시 차량</li>
+                        <li>시승 거점</li>
+                        <li>출고 센터</li>
+                    </ul>
+                </li>
+                <li>견적 내기
+                    <ul class="pc">
+                        <li>EV & PBV</li>
+                        <li>승용</li>
+                        <li>RV</li>
+                        <li>택시 & 상용</li>
+                    </ul>
+                </li>
+                <li>구매 상담 신청</li>
+                <li>시승 신청</li>
+                <li>기아렌터카
+                    <ul class="pc">
+                        <li>기아플렉스</li>
+                        <li>원하는 상품 찾기</li>
+                        <li>제공 서비스</li>
+                        <li>기아플렉스 모바일 앱</li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="display-flex-flow mo">
+                <img
+                    src="https://www.kia.com/etc.clientlibs/kwp-global/clientlibs/clientlib-site/resources/images/common/ic_kia_members.png">
+                <img
+                    src="https://www.kia.com/etc.clientlibs/kwp-global/clientlibs/clientlib-site/resources/images/common/ic_facebook.svg">
+                <img
+                    src="https://www.kia.com/etc.clientlibs/kwp-global/clientlibs/clientlib-site/resources/images/common/ic_instagram.svg">
+                <img
+                    src="https://www.kia.com/etc.clientlibs/kwp-global/clientlibs/clientlib-site/resources/images/common/ic_youtube.svg">
+            </div>
+            <div>
+                <h3>kia center</h3>
+                <ul>
+                    <li>고객센터 080-200-2000</li>
+                    <li>평일 : 08:30 ~ 18:00</li>
+                    <li>점심: 12:00 ~ 13:00</li>
+                    <li>주말, 공휴일 휴무 입니다.</li>
+                </ul>
+            </div>
+            <ul>
+                <li><span>개인정보 처리방침</span></li>
+                <li>프라이버시 센터</li>
+                <li>이용약관</li>
+                <li>윤리경영 사이버감사실</li>
+                <li>전자공고</li>
+                <li>사이트맵</li>
+            </ul>
+            <div>
+                <div class="pc-flex">
+                    <img
+                        src="https://www.kia.com/etc.clientlibs/kwp-global/clientlibs/clientlib-site/resources/images/common/ic_kia_members.png">
+                    <img
+                        src="https://www.kia.com/etc.clientlibs/kwp-global/clientlibs/clientlib-site/resources/images/common/ic_facebook.svg">
+                    <img
+                        src="https://www.kia.com/etc.clientlibs/kwp-global/clientlibs/clientlib-site/resources/images/common/ic_instagram.svg">
+                    <img
+                        src="https://www.kia.com/etc.clientlibs/kwp-global/clientlibs/clientlib-site/resources/images/common/ic_youtube.svg">
+                </div>
+                <p><span>© Kia Corp</span>. All rights reserved</p>
+                <div class="select-menu">
+                    <div>
+                        <ul class="options">
+                            <li class="option">
+                                <span class="option-text">현대자동차그룹</span>
+                            </li>
+                            <li class="option">
+                                <span class="option-text">기아멤버스</span>
+                            </li>
+                            <li class="option">
+                                <span class="option-text">기아 드라이빙 아카데미</span>
+                            </li>
+                            <li class="option">
+                                <span class="option-text">인재채용</span>
+                            </li>
+                            <li class="option">
+                                <span class="option-text">IR</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="select-btn">
+                        <span class="sBtn-text active">Family site</span>
+                        <img src="https://www.acebed.com/common/images/select-icon2-on.png">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <script>
+        // select 스타일
+        const optionMenu = document.querySelector(".select-menu"),
+            selectBtn = optionMenu.querySelector(".select-btn"),
+            options = optionMenu.querySelectorAll(".option"),
+            sBtn_text = optionMenu.querySelector(".sBtn-text");
+
+        selectBtn.addEventListener("click", () => optionMenu.classList.toggle("active"));
+
+        options.forEach(option => {
+            option.addEventListener("click", () => {
+                let selectedOption = option.querySelector(".option-text").innerText;
+                sBtn_text.innerText = selectedOption;
+
+                optionMenu.classList.remove("active");
+            })
+        });
+    </script>
+
+</body>
+
+
+</html>
